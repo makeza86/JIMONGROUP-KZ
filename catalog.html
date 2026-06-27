@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/icons/icon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/icon-180x180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Каталог продукции JIMON GROUP — полная линейка ТКМ-комплексов</title>
+<meta name="description" content="Полный каталог продукции JIMON GROUP: BIRUNKANG, СЮЭ ЛАН ДО, СЯНЬ ЮНЬ Ю, MAYOU, SHANLINENG и другие. Натуральные комплексы на принципах традиционной китайской медицины.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jimongroup.kz/catalog.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Каталог продукции JIMON GROUP",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"item":{"@type":"Product","name":"BIRUNKANG — Жевательные таблетки Лотос и Боярышник","description":"Натуральные жевательные таблетки на основе листа лотоса, боярышника, пории и семян кассии для поддержки пищеварения."}},
+    {"@type":"ListItem","position":2,"item":{"@type":"Product","name":"СЮЭ ЛАН ДО — Ангелика Кейске и Натто","description":"Таблетки для рассасывания на основе Ангелики Кейске и Натто для поддержки сердца и сосудов."}},
+    {"@type":"ListItem","position":3,"item":{"@type":"Product","name":"СЯНЬ ЮНЬ Ю — Фруктово-овощные таблетки","description":"Фруктово-овощные жевательные таблетки на основе более 10 натуральных экстрактов для обмена веществ."}},
+    {"@type":"ListItem","position":4,"item":{"@type":"Product","name":"MAYOU — Почечный комплекс Женьшень и Хуанцзин","description":"Премиальный фитокомплекс с женьшенем, хуанцзином и ягодами годжи для поддержки почек."}}
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#060a0e; --card-bg:#0d1f12; --gold:#c9a84c; --gold-light:#e8c97a;
+    --text:#e2e8f0; --text2:#94a3b8; --border:rgba(212,168,76,0.2);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Manrope',system-ui,-apple-system,sans-serif; background:var(--bg); color:var(--text); line-height:1.6;}
+  h1{font-family:'Noto Serif SC','Georgia',serif;}
+
+  nav{position:sticky; top:0; z-index:50; background:rgba(6,10,14,0.95); backdrop-filter:blur(14px); border-bottom:1px solid var(--border); padding:0 24px; height:64px; display:flex; align-items:center; justify-content:space-between;}
+  .nav-logo{display:flex; align-items:center; gap:10px; text-decoration:none;}
+  .nav-logo-badge{width:36px; height:36px; border-radius:9px; background:linear-gradient(160deg,var(--gold),#a6822f); display:flex; align-items:center; justify-content:center; font-size:16px; color:var(--bg); font-weight:700;}
+  .nav-logo-text{font-weight:800; color:var(--gold-light); font-size:1rem;}
+  .back-link{font-size:0.85rem; color:var(--text2); text-decoration:none; font-weight:600;}
+
+  .header{padding:44px 24px 30px; text-align:center; max-width:700px; margin:0 auto;}
+  .header h1{font-size:clamp(1.6rem,3.4vw,2.2rem); color:var(--gold-light); margin-bottom:10px;}
+  .header p{color:var(--text2); font-size:0.95rem;}
+
+  .container{max-width:1100px; margin:0 auto; padding:0 24px 70px;}
+
+  .product-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:18px;}
+  .pcard{flex-shrink:0; background:var(--card-bg); border:1px solid var(--border); border-radius:14px; overflow:hidden; display:flex; flex-direction:column;}
+  .pcard-img-wrap{width:100%; height:190px; overflow:hidden; background:#0a1810;}
+  .pcard-img-wrap img{width:100%; height:190px; object-fit:cover; object-position:center;}
+  .pcard-body{padding:14px; flex:1; display:flex; flex-direction:column;}
+  .pcard-brand{font-size:13px; font-weight:700; color:var(--text); margin-bottom:3px; line-height:1.35;}
+  .pcard-short{font-size:11px; color:var(--gold); margin-bottom:8px; font-weight:600; text-transform:uppercase; letter-spacing:0.3px;}
+  .pcard-hook{font-size:12px; color:var(--text2); margin-bottom:10px; line-height:1.5; flex:1;}
+  .pcard-actions{display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:4px;}
+  .pcard-more{font-size:11px; color:rgba(148,163,184,0.55); cursor:pointer; text-decoration:underline; text-decoration-color:rgba(148,163,184,0.3);}
+  .pcard-more:hover{color:var(--gold);}
+  .pcard-ask{font-size:11px; color:var(--gold-light); cursor:pointer; font-weight:700; background:rgba(212,168,76,0.1); border:1px solid rgba(212,168,76,0.25); border-radius:8px; padding:5px 10px;}
+  .pcard-ask:hover{background:rgba(212,168,76,0.18);}
+  .pcard-desc{display:none; margin-top:10px; padding-top:10px; border-top:1px solid rgba(212,168,76,0.12); font-size:11.5px; color:var(--text2); line-height:1.65;}
+  .pcard-desc.open{display:block;}
+
+  h2.section-h{font-family:'Noto Serif SC',serif; color:var(--gold-light); font-size:1.4rem; margin:50px 0 6px; text-align:center;}
+  .section-sub-h{text-align:center; color:var(--text2); font-size:0.92rem; margin-bottom:24px;}
+
+  .cta-block{text-align:center; margin-top:50px; padding:36px; background:linear-gradient(165deg,#0d1f12,#060a0e); border:1px solid var(--border); border-radius:20px;}
+  .btn-primary{display:inline-flex; padding:14px 30px; border-radius:14px; background:linear-gradient(135deg,var(--gold),var(--gold-light)); color:var(--bg); font-weight:700; text-decoration:none; margin-top:14px; border:none; cursor:pointer; font-size:0.95rem;}
+
+  footer{text-align:center; padding:26px 24px; color:var(--text2); font-size:0.8rem;}
+
+  .peng-modal-overlay{position:fixed; inset:0; background:rgba(0,0,0,0.7); backdrop-filter:blur(3px); z-index:200; display:none; align-items:center; justify-content:center; padding:16px;}
+  .peng-modal-overlay.open{display:flex;}
+  .peng-modal-box{background:var(--card-bg); border:1px solid var(--border); border-radius:18px; width:100%; max-width:420px; max-height:85vh; display:flex; flex-direction:column; overflow:hidden;}
+  .peng-modal-header{padding:14px 16px; background:rgba(212,168,76,0.08); border-bottom:1px solid var(--border); display:flex; align-items:center; gap:10px;}
+  .peng-modal-avatar{width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,var(--gold),var(--gold-light)); display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--bg); flex-shrink:0;}
+  .peng-modal-title{flex:1;}
+  .peng-modal-name{font-weight:700; color:var(--text); font-size:0.92rem;}
+  .peng-modal-product{font-size:0.74rem; color:var(--gold);}
+  .peng-modal-close{background:none; border:none; color:var(--text2); font-size:1.2rem; cursor:pointer; padding:4px;}
+  .peng-modal-messages{flex:1; overflow-y:auto; padding:16px; display:flex; flex-direction:column; gap:10px; min-height:200px;}
+  .pm-msg{max-width:85%; padding:10px 13px; border-radius:14px; font-size:0.85rem; line-height:1.5;}
+  .pm-msg.peng{align-self:flex-start; background:rgba(255,255,255,0.06); color:var(--text);}
+  .pm-msg.user{align-self:flex-end; background:linear-gradient(135deg,var(--gold),var(--gold-light)); color:var(--bg); font-weight:600;}
+  .pm-typing{align-self:flex-start; display:flex; gap:4px; padding:10px 14px; background:rgba(255,255,255,0.06); border-radius:14px;}
+  .pm-typing span{width:6px; height:6px; border-radius:50%; background:var(--text2); animation:pmblink 1.2s infinite;}
+  .pm-typing span:nth-child(2){animation-delay:.2s;} .pm-typing span:nth-child(3){animation-delay:.4s;}
+  @keyframes pmblink{0%,60%,100%{opacity:.3;transform:translateY(0);} 30%{opacity:1;transform:translateY(-4px);}}
+  .peng-modal-input-row{padding:12px; border-top:1px solid var(--border); display:flex; gap:8px;}
+  .peng-modal-input-row input{flex:1; background:rgba(255,255,255,0.06); border:1px solid var(--border); border-radius:10px; padding:10px 12px; color:var(--text); font-size:0.85rem; outline:none;}
+  .peng-modal-input-row button{background:var(--gold); border:none; border-radius:10px; width:38px; color:var(--bg); font-weight:700; cursor:pointer;}
+  .peng-modal-limit{padding:10px 16px; text-align:center; font-size:0.78rem; color:var(--text2); border-top:1px solid var(--border);}
+  .peng-modal-cta{display:none; padding:16px; text-align:center;}
+  .peng-modal-cta.show{display:block;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/index.html" class="nav-logo">
+    <div class="nav-logo-badge">鹏</div>
+    <div class="nav-logo-text">JIMON GROUP</div>
+  </a>
+  <a href="/index.html" class="back-link">← На главную</a>
+</nav>
+
+<div class="header">
+  <h1>Продукция JIMON GROUP</h1>
+  <p>Полная линейка комплексов традиционной китайской медицины.</p>
+</div>
+
+<div class="container">
+  <div class="product-grid" id="productGrid">
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/product-1.png" alt="BIRUNKANG (碧润康) · Жевательные таблетки «Лотос и Боярышник»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">BIRUNKANG (碧润康) · Жевательные таблетки «Лотос и Боярышник»</div>
+      <div class="pcard-short">Пищеварение · детокс</div>
+      <div class="pcard-hook">Натуральные жевательные таблетки на основе традиционных китайских трав — листа лотоса, боярышника, пории и семян кассии. 2–3 таблетки в день помогают поддержать пищеварение, лёгкость тела и свежесть. 30 таблеток — курс на 10–15 дней.</div>
+      <div class="pcard-actions">
+      <a href="/birunkang.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="product-1" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Тяжесть после еды, вздутие, жирный блеск на коже, налёт на языке, постоянная усталость — всё это признаки того, что организму нужна мягкая поддержка.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/product-2.png" alt="СЮЭ ЛАН ДО (雪蓝朵) · «Ангелика Кейске и Натто»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">СЮЭ ЛАН ДО (雪蓝朵) · «Ангелика Кейске и Натто»</div>
+      <div class="pcard-short">Сердце · сосуды</div>
+      <div class="pcard-hook">Таблетки для рассасывания на основе Ангелики Кейске (Аситаба) и Натто, дополненные лумброкиназой, рыльцами кукурузы и растительными экстрактами. 60 таблеток.</div>
+      <div class="pcard-actions">
+     <a href="/xuelanduo.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="product-2" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Сердце работает без остановки 24 часа в сутки. Стресс, малоподвижный образ жизни и возраст постепенно влияют на кровообращение и тонус сосудов.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/product-3.png" alt="СЯНЬ ЮНЬ Ю (纤韵悠) · Фруктово-овощные таблетки" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">СЯНЬ ЮНЬ Ю (纤韵悠) · Фруктово-овощные таблетки</div>
+      <div class="pcard-short">Антивисцерал · Вывод</div>
+      <div class="pcard-hook">Фруктово-овощные жевательные таблетки на основе более 10 натуральных экстрактов: клубника, черника, зелёный кофе, белая фасоль, женьшень, кудзу. 30 таблеток в упаковке.</div>
+      <div class="pcard-actions">
+      <a href="/xianyunyu.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="product-3" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Медленный обмен веществ — не приговор, а сигнал организма: ему не хватает нужных нутриентов, пищевых волокон и поддержки кишечника.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/product-4.png" alt="MAYOU (马优) · Почечный комплекс «Женьшень и Хуанцзин»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">MAYOU (马优) · Почечный комплекс «Женьшень и Хуанцзин»</div>
+      <div class="pcard-short">Почки · мужское</div>
+      <div class="pcard-hook">Премиальный фитокомплекс с женьшенем, хуанцзином, ягодами годжи и мужскими цветками эвкоммии. Технология мгновенной заморозки −196°C. 20 таблеток.</div>
+      <div class="pcard-actions">
+     <a href="/mayou.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="product-4" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">В восточной медицине почки — источник жизненной энергии Ци, основа выносливости, иммунитета и репродуктивной функции.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/product-5.png" alt="ШАНЬ ЛИ НЭН (膳力能) · Льняной коллагеновый пептидный порошок" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">ШАНЬ ЛИ НЭН (膳力能) · Льняной коллагеновый пептидный порошок</div>
+      <div class="pcard-short">Питание · Молодость</div>
+      <div class="pcard-hook">Многофункциональный синергетический порошковый напиток на основе льняного семени и костного коллагенового пептида. Белая фасоль блокирует усвоение углеводов. Стики 30 г × 10 порций.</div>
+      <div class="pcard-actions">
+      <a href="/shanlineng.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="product-5" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Современный ритм жизни — это еда на бегу. Этот напиток создан для тех, кто хочет питаться осознанно.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/product-6.png" alt="SHANLINENG (膳力能) · Комплекс для суставов и костей" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">SHANLINENG (膳力能) · Комплекс для суставов и костей</div>
+      <div class="pcard-short">Суставной · Коллаген</div>
+      <div class="pcard-hook">Комплексный питательный порошок: коллаген II типа, хондроитин, глюкозамин, гиалуроновая кислота и минералы. Саше 6г × 20 пакетов.</div>
+      <div class="pcard-actions">
+     <a href="/shanlineng-sustav.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="product-6" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Суставы и кости держат нас всю жизнь, но изнашиваются первыми. Комплекс даёт им именно то, из чего они состоят.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/product-7.png" alt="SHANLINENG (膳力能) · Костный коллагеновый пептидный напиток" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">SHANLINENG (膳力能) · Костный коллагеновый пептидный напиток</div>
+      <div class="pcard-short">Пептидный · Коллаген</div>
+      <div class="pcard-hook">Функциональный порошковый напиток с костным коллагеном. Стики по 10г — размешать в горячей воде. 20 порций в упаковке.</div>
+      <div class="pcard-actions">
+      <a href="/shanlineng-napitok.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="product-7" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">С годами суставы начинают «скрипеть» — это нехватка коллагена, из которого на 30% состоят наши кости, хрящи и связки.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/product-8.png" alt="YISHAYANMEI (伊莎妍美) · Интимный бактериостатический комплекс" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">YISHAYANMEI (伊莎妍美) · Интимный бактериостатический комплекс</div>
+      <div class="pcard-short">Женское здоровье</div>
+      <div class="pcard-hook">Инновационные фитокапсулы для локального бактериостатического ухода с воробейником, хризантемой и клюквой. Для женщин и мужчин. 10 капсул по 5,5 мл.</div>
+      <div class="pcard-actions">
+     <a href="/yishayanmei.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="product-8" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Деликатная зона — первая линия защиты организма, одна из самых чувствительных к стрессу.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/product-9.png" alt="TIANRANCUI (添然萃) · Напиток с дигидрокверцетином" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">TIANRANCUI (添然萃) · Напиток с дигидрокверцетином</div>
+      <div class="pcard-short">Бронхи · Горло</div>
+      <div class="pcard-hook">Растительный напиток на основе дигидрокверцетина, мёда, фруктовых концентратов и трав. Саше 25 мл, 20 штук в упаковке.</div>
+      <div class="pcard-actions">
+      <a href="/tianrancui.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="product-9" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Сухой воздух, пыль, курение, городской смог раздражают горло — этот напиток создан для точечной защиты.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/product-10.png" alt="КЭЛЭШУ (科集桂) · Травяной массажный крем двойного действия" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">КЭЛЭШУ (科集桂) · Травяной массажный крем двойного действия</div>
+      <div class="pcard-short">Суставы · массаж</div>
+      <div class="pcard-hook">Травяной массажный крем на базе восьми видов чистых эфирных масел и экстрактов китайских трав. 100 г, наружное применение.</div>
+      <div class="pcard-actions">
+     <a href="/kelesu.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="product-10" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Облегчение мышечной и суставной боли после долгого сидения, стояния или физических нагрузок.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/product-11.png" alt="AZEYIHUANG (阿泽益黄) · «Король иммунитета» Цикорий" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">AZEYIHUANG (阿泽益黄) · «Король иммунитета» Цикорий</div>
+      <div class="pcard-short">Иммунитет · цикорий</div>
+      <div class="pcard-hook">Жевательные таблетки на основе цикория. Корень цикория содержит до 70% инулина. 50 таблеток по 0,3 г.</div>
+      <div class="pcard-actions">
+     <a href="/azeyihuang.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="product-11" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Современная наука называет кишечник «вторым мозгом» — 70–80% иммунных клеток организма находятся именно там.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/product-12.png" alt="Тун Юань Бао Цин (同源葆青) · «Создатель стволовых клеток»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">Тун Юань Бао Цин (同源葆青) · «Создатель стволовых клеток»</div>
+      <div class="pcard-short">Омоложение клеток</div>
+      <div class="pcard-hook">Инновационный комплекс на основе пептида бычьего костного мозга. 90 таблеток по 0,9 г — трёхмесячный курс клеточной поддержки.</div>
+      <div class="pcard-actions">
+     <a href="/tunyuanbaoqing.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="product-12" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Костный мозг — «фабрика жизни» внутри тела, именно здесь рождаются стволовые клетки.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/product-13.png" alt="ЮАНЬЮНЬ (媛韵牌) · Антибактериальный глазной стик «Кушень»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">ЮАНЬЮНЬ (媛韵牌) · Антибактериальный глазной стик «Кушень»</div>
+      <div class="pcard-short">Глаза · усталость</div>
+      <div class="pcard-hook">Компактный золотой стик с растительным бактериостатическим раствором на основе корня софоры и ментола. 10 мл.</div>
+      <div class="pcard-actions">
+      <a href="/yuanyun.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="product-13" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Глаза первыми устают в мире экранов — стик возвращает комфорт без капель и без спешки в аптеку.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/product-14.png" alt="SULRANCHO (雪兰草) · Антивозрастной мист «Снежная Орхидея»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">SULRANCHO (雪兰草) · Антивозрастной мист «Снежная Орхидея»</div>
+      <div class="pcard-short">Антивозрастной мист</div>
+      <div class="pcard-hook">Многофункциональный спрей-уход для лица с экстрактом снежной орхидеи, 4 пептидами и фуллереном. 120 мл.</div>
+      <div class="pcard-actions">
+      <a href="/sulrancho.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="product-14" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Разглаживает морщинки, возвращает ровный тон, сужает поры, насыщает влагой — за секунды, дома или в дороге.</div>
+      </div></div>
+  </div>
+
+  <h2 class="section-h">Комплексные наборы</h2>
+  <p class="section-sub-h">Готовые программы из нескольких продуктов для комплексного решения</p>
+  <div class="product-grid" id="complexGrid">
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/complex-a.png" alt="«ФИГУРА A» · Диетический комплексный набор" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">«ФИГУРА A» · Диетический комплексный набор</div>
+      <div class="pcard-short">Фигура · детокс</div>
+      <div class="pcard-hook">Готовая программа: мягкое очищение, поддержка обмена веществ, контроль аппетита, питание суставов и общий тонус за счёт женьшеня и дудника.</div>
+      <div class="pcard-actions">
+      <a href="/complex-a.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="complex-a" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Для тех, кто хочет уменьшить объёмы без жёстких диет, чувствует тяжесть и отёчность, много сидит и мало двигается.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/complex-b.png" alt="«ФИГУРА B» (версия Snow Lan Duo)" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">«ФИГУРА B» (версия Snow Lan Duo)</div>
+      <div class="pcard-short">Фигура · снижение веса</div>
+      <div class="pcard-hook">Акцент на лёгком очищении, работе с пищеварением и более выраженном дренажном эффекте — для фигуры, склонной к отёкам и «мягкости» в области живота и бёдер.</div>
+      <div class="pcard-actions">
+     <a href="/complex-b.html" class="pcard-more">подробнее →</a>
+      <button class="pcard-ask" data-key="complex-b" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Для тех, у кого вес «стоит», хотя питание уже улучшено, и есть застойность в теле.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/complex-c.png" alt="КОМПЛЕКС «C» «Молодость изнутри и снаружи»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">КОМПЛЕКС «C» «Молодость изнутри и снаружи»</div>
+      <div class="pcard-short">Молодость · антивозраст</div>
+      <div class="pcard-hook">Трёхступенчатая система: коллагеновый пептидный порошок питает кожу изнутри, напиток с дигидрокверцетином защищает коллаген, антивозрастной мист закрепляет результат снаружи.</div>
+      <div class="pcard-actions">
+      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+      <button class="pcard-ask" data-key="complex-c" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Для тех, кто замечает первые морщины, тусклость кожи и хочет замедлить старение без процедур и уколов.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/complex-d.png" alt="КОМПЛЕКС «D» «Суставы и подвижность»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">КОМПЛЕКС «D» «Суставы и подвижность»</div>
+      <div class="pcard-short">Суставы · движение</div>
+      <div class="pcard-hook">Порошок для суставов питает хрящ изнутри, костный коллагеновый напиток укрепляет кость, а массажный крем даёт быстрое облегчение снаружи.</div>
+      <div class="pcard-actions">
+      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+      <button class="pcard-ask" data-key="complex-d" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Для тех, у кого колени скрипят, спина ноет, и важна профилактика остеопороза.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/complex-e.png" alt="КОМПЛЕКС «E» «Сосуды и давление»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">КОМПЛЕКС «E» «Сосуды и давление»</div>
+      <div class="pcard-short">Сосуды · сердце</div>
+      <div class="pcard-hook">Таблетки Ангелика Кейске и Натто очищают сосуды, напиток с дигидрокверцетином защищает капилляры, почечный комплекс регулирует давление через водно-солевой баланс.</div>
+      <div class="pcard-actions">
+      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+      <button class="pcard-ask" data-key="complex-e" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Для тех, у кого давление скачет, отёки к вечеру и слабое кровообращение.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/complex-f.png" alt="КОМПЛЕКС «F» «Мужская сила и тонус»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">КОМПЛЕКС «F» «Мужская сила и тонус»</div>
+      <div class="pcard-short">Мужская сила</div>
+      <div class="pcard-hook">Почечный комплекс восстанавливает базовую энергию, напиток с дигидрокверцетином ускоряет восстановление, таблетки Ангелика Кейске улучшают доставку питания к тканям.</div>
+      <div class="pcard-actions">
+      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+      <button class="pcard-ask" data-key="complex-f" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Для тех, кто чувствует упадок сил и снижение мужского тонуса.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/complex-g.png" alt="КОМПЛЕКС «G» «Женское здоровье»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">КОМПЛЕКС «G» «Женское здоровье»</div>
+      <div class="pcard-short">Женский баланс</div>
+      <div class="pcard-hook">Интимный бактериостатический комплекс восстанавливает микрофлору, почечный комплекс нормализует гормональный баланс и снижает ПМС, фруктово-овощные таблетки контролируют аппетит.</div>
+      <div class="pcard-actions">
+      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+      <button class="pcard-ask" data-key="complex-g" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Для тех, у кого гормональный дисбаланс, ПМС и тяга к перекусам.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/complex-h.png" alt="КОМПЛЕКС «H» «Антиоксидант и детокс»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">КОМПЛЕКС «H» «Антиоксидант и детокс»</div>
+      <div class="pcard-short">Иммунитет · детокс</div>
+      <div class="pcard-hook">Напиток с дигидрокверцетином нейтрализует свободные радикалы, таблетки Лотос и Боярышник очищают кишечник, таблетки Ангелика Кейске очищают кровь и сосуды.</div>
+      <div class="pcard-actions">
+      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+      <button class="pcard-ask" data-key="complex-h" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Для тех, у кого ощущение зашлакованности, тяжесть без причины, хронический стресс.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/complex-i.png" alt="КОМПЛЕКС «I» «Глаза и экранная усталость»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">КОМПЛЕКС «I» «Глаза и экранная усталость»</div>
+      <div class="pcard-short">Зрение · глаза</div>
+      <div class="pcard-hook">Глазной стик снимает усталость снаружи, напиток с дигидрокверцетином защищает сетчатку изнутри, таблетки улучшают микроциркуляцию в капиллярах глаза.</div>
+      <div class="pcard-actions">
+      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+      <button class="pcard-ask" data-key="complex-i" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Для тех, чьи глаза краснеют и устают после работы за экраном.</div>
+      </div></div>
+      <div class="pcard">
+      <div class="pcard-img-wrap"><img src="/images/complex-j.png" alt="КОМПЛЕКС «J» «Лёгкий старт»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="pcard-body">
+      <div class="pcard-brand">КОМПЛЕКС «J» «Лёгкий старт»</div>
+      <div class="pcard-short">Энергия · тонус</div>
+      <div class="pcard-hook">Базовая программа: таблетки Лотос и Боярышник очищают кишечник и открывают путь для усвоения питательных веществ, почечный комплекс восстанавливает базовую энергию и тонус.</div>
+      <div class="pcard-actions">
+      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+      <button class="pcard-ask" data-key="complex-j" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+      </div>
+      <div class="pcard-desc">Для тех, кто хочет попробовать продукцию JIMON с чего-то простого и понятного.</div>
+      </div></div>
+  </div>
+
+ <div class="cta-block">
+  <h2 style="color:var(--gold-light); font-family:'Noto Serif SC',serif; font-size:1.3rem;">Нужна помощь с выбором?</h2>
+  <p style="color:rgba(250,246,236,0.7); margin-top:8px;">Спросите Пэн прямо на карточке товара, или свяжитесь с куратором.</p>
+  <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+    <a href="/index.html?interest=client#lead" class="btn-primary" style="margin-top:14px;">Стать клиентом →</a>
+    <a href="/index.html?interest=partner#lead" class="btn-primary" style="margin-top:14px; background:transparent; color:var(--gold-light); border:2px solid var(--gold);">Стать партнёром →</a>
+  </div>
+</div>
+</div>
+
+<footer>© 2026 JIMON GROUP · <a href="/index.html" style="color:var(--gold);">jimongroup.kz</a><br><a href="/about.html" style="color:var(--gold);">О компании</a> · <a href="/catalog.html" style="color:var(--gold);">Каталог</a> · <a href="/marketing-plan.html" style="color:var(--gold);">Маркетинг-план</a> · <a href="/documentation.html" style="color:var(--gold);">Документация</a> · <a href="/privacy.html" style="color:var(--gold);">Конфиденциальность</a></footer>
+
+<div class="peng-modal-overlay" id="pengModal">
+  <div class="peng-modal-box">
+    <div class="peng-modal-header">
+      <div class="peng-modal-avatar">鹏</div>
+      <div class="peng-modal-title">
+        <div class="peng-modal-name">Пэн</div>
+        <div class="peng-modal-product" id="pengModalProduct"></div>
+      </div>
+      <button class="peng-modal-close" onclick="closePengModal()">✕</button>
+    </div>
+    <div class="peng-modal-messages" id="pengModalMessages"></div>
+    <div class="peng-modal-cta" id="pengModalCta">
+  <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+    <a href="/index.html?interest=client#lead" class="btn-primary" style="margin-top:0;">Стать клиентом →</a>
+    <a href="/index.html?interest=partner#lead" class="btn-primary" style="margin-top:0; background:transparent; color:var(--gold-light); border:2px solid var(--gold);">Стать партнёром →</a>
+  </div>
+</div>
+    <div class="peng-modal-input-row" id="pengModalInputRow">
+      <input type="text" id="pengModalInput" placeholder="Спросите про этот товар..." onkeypress="if(event.key==='Enter') sendCatalogPeng()">
+      <button onclick="sendCatalogPeng()">→</button>
+    </div>
+    <div class="peng-modal-limit" id="pengModalLimit">Бесплатных вопросов сегодня: 10</div>
+  </div>
+</div>
+
+<script>
+// ===== БАЗА ДАННЫХ ПРОДУКЦИИ (используется только для контекста чата с Пэн —
+//       видимые карточки выше теперь статический HTML для индексации поисковиками) =====
+const PRODUCTS = {"product-1": {"brand": "BIRUNKANG (碧润康) · Жевательные таблетки «Лотос и Боярышник»", "short": "Пищеварение · детокс", "desc": "Натуральные жевательные таблетки на основе традиционных китайских трав — листа лотоса, боярышника, пории и семян кассии. 2–3 таблетки в день помогают поддержать пищеварение, лёгкость тела и свежесть. 30 таблеток — курс на 10–15 дней.\n\nТяжесть после еды, вздутие, жирный блеск на коже, налёт на языке, постоянная усталость — всё это признаки того, что организму нужна мягкая поддержка."}, "product-2": {"brand": "СЮЭ ЛАН ДО (雪蓝朵) · «Ангелика Кейске и Натто»", "short": "Сердце · сосуды", "desc": "Таблетки для рассасывания на основе Ангелики Кейске (Аситаба) и Натто, дополненные лумброкиназой, рыльцами кукурузы и растительными экстрактами. 60 таблеток.\n\nСердце работает без остановки 24 часа в сутки. Стресс, малоподвижный образ жизни и возраст постепенно влияют на кровообращение и тонус сосудов."}, "product-3": {"brand": "СЯНЬ ЮНЬ Ю (纤韵悠) · Фруктово-овощные таблетки", "short": "Антивисцерал · Вывод", "desc": "Фруктово-овощные жевательные таблетки на основе более 10 натуральных экстрактов: клубника, черника, зелёный кофе, белая фасоль, женьшень, кудзу. 30 таблеток в упаковке.\n\nМедленный обмен веществ — не приговор, а сигнал организма: ему не хватает нужных нутриентов, пищевых волокон и поддержки кишечника."}, "product-4": {"brand": "MAYOU (马优) · Почечный комплекс «Женьшень и Хуанцзин»", "short": "Почки · мужское", "desc": "Премиальный фитокомплекс с женьшенем, хуанцзином, ягодами годжи и мужскими цветками эвкоммии. Технология мгновенной заморозки −196°C. 20 таблеток.\n\nВ восточной медицине почки — источник жизненной энергии Ци, основа выносливости, иммунитета и репродуктивной функции."}, "product-5": {"brand": "ШАНЬ ЛИ НЭН (膳力能) · Льняной коллагеновый пептидный порошок", "short": "Питание · Молодость", "desc": "Многофункциональный синергетический порошковый напиток на основе льняного семени и костного коллагенового пептида. Белая фасоль блокирует усвоение углеводов. Стики 30 г × 10 порций.\n\nСовременный ритм жизни — это еда на бегу. Этот напиток создан для тех, кто хочет питаться осознанно."}, "product-6": {"brand": "SHANLINENG (膳力能) · Комплекс для суставов и костей", "short": "Суставной · Коллаген", "desc": "Комплексный питательный порошок: коллаген II типа, хондроитин, глюкозамин, гиалуроновая кислота и минералы. Саше 6г × 20 пакетов.\n\nСуставы и кости держат нас всю жизнь, но изнашиваются первыми. Комплекс даёт им именно то, из чего они состоят."}, "product-7": {"brand": "SHANLINENG (膳力能) · Костный коллагеновый пептидный напиток", "short": "Пептидный · Коллаген", "desc": "Функциональный порошковый напиток с костным коллагеном. Стики по 10г — размешать в горячей воде. 20 порций в упаковке.\n\nС годами суставы начинают «скрипеть» — это нехватка коллагена, из которого на 30% состоят наши кости, хрящи и связки."}, "product-8": {"brand": "YISHAYANMEI (伊莎妍美) · Интимный бактериостатический комплекс", "short": "Женское здоровье", "desc": "Инновационные фитокапсулы для локального бактериостатического ухода с воробейником, хризантемой и клюквой. Для женщин и мужчин. 10 капсул по 5,5 мл.\n\nДеликатная зона — первая линия защиты организма, одна из самых чувствительных к стрессу."}, "product-9": {"brand": "TIANRANCUI (添然萃) · Напиток с дигидрокверцетином", "short": "Бронхи · Горло", "desc": "Растительный напиток на основе дигидрокверцетина, мёда, фруктовых концентратов и трав. Саше 25 мл, 20 штук в упаковке.\n\nСухой воздух, пыль, курение, городской смог раздражают горло — этот напиток создан для точечной защиты."}, "product-10": {"brand": "КЭЛЭШУ (科集桂) · Травяной массажный крем двойного действия", "short": "Суставы · массаж", "desc": "Травяной массажный крем на базе восьми видов чистых эфирных масел и экстрактов китайских трав. 100 г, наружное применение.\n\nОблегчение мышечной и суставной боли после долгого сидения, стояния или физических нагрузок."}, "product-11": {"brand": "AZEYIHUANG (阿泽益黄) · «Король иммунитета» Цикорий", "short": "Иммунитет · цикорий", "desc": "Жевательные таблетки на основе цикория. Корень цикория содержит до 70% инулина. 50 таблеток по 0,3 г.\n\nСовременная наука называет кишечник «вторым мозгом» — 70–80% иммунных клеток организма находятся именно там."}, "product-12": {"brand": "Тун Юань Бао Цин (同源葆青) · «Создатель стволовых клеток»", "short": "Омоложение клеток", "desc": "Инновационный комплекс на основе пептида бычьего костного мозга. 90 таблеток по 0,9 г — трёхмесячный курс клеточной поддержки.\n\nКостный мозг — «фабрика жизни» внутри тела, именно здесь рождаются стволовые клетки."}, "product-13": {"brand": "ЮАНЬЮНЬ (媛韵牌) · Антибактериальный глазной стик «Кушень»", "short": "Глаза · усталость", "desc": "Компактный золотой стик с растительным бактериостатическим раствором на основе корня софоры и ментола. 10 мл.\n\nГлаза первыми устают в мире экранов — стик возвращает комфорт без капель и без спешки в аптеку."}, "product-14": {"brand": "SULRANCHO (雪兰草) · Антивозрастной мист «Снежная Орхидея»", "short": "Антивозрастной мист", "desc": "Многофункциональный спрей-уход для лица с экстрактом снежной орхидеи, 4 пептидами и фуллереном. 120 мл.\n\nРазглаживает морщинки, возвращает ровный тон, сужает поры, насыщает влагой — за секунды, дома или в дороге."}};
+const COMPLEXES = {"complex-a": {"brand": "«ФИГУРА A» · Диетический комплексный набор", "short": "Фигура · детокс", "desc": "Готовая программа: мягкое очищение, поддержка обмена веществ, контроль аппетита, питание суставов и общий тонус за счёт женьшеня и дудника.\n\nДля тех, кто хочет уменьшить объёмы без жёстких диет, чувствует тяжесть и отёчность, много сидит и мало двигается."}, "complex-b": {"brand": "«ФИГУРА B» (версия Snow Lan Duo)", "short": "Фигура · снижение веса", "desc": "Акцент на лёгком очищении, работе с пищеварением и более выраженном дренажном эффекте — для фигуры, склонной к отёкам и «мягкости» в области живота и бёдер.\n\nДля тех, у кого вес «стоит», хотя питание уже улучшено, и есть застойность в теле."}, "complex-c": {"brand": "КОМПЛЕКС «C» «Молодость изнутри и снаружи»", "short": "Молодость · антивозраст", "desc": "Трёхступенчатая система: коллагеновый пептидный порошок питает кожу изнутри, напиток с дигидрокверцетином защищает коллаген, антивозрастной мист закрепляет результат снаружи.\n\nДля тех, кто замечает первые морщины, тусклость кожи и хочет замедлить старение без процедур и уколов."}, "complex-d": {"brand": "КОМПЛЕКС «D» «Суставы и подвижность»", "short": "Суставы · движение", "desc": "Порошок для суставов питает хрящ изнутри, костный коллагеновый напиток укрепляет кость, а массажный крем даёт быстрое облегчение снаружи.\n\nДля тех, у кого колени скрипят, спина ноет, и важна профилактика остеопороза."}, "complex-e": {"brand": "КОМПЛЕКС «E» «Сосуды и давление»", "short": "Сосуды · сердце", "desc": "Таблетки Ангелика Кейске и Натто очищают сосуды, напиток с дигидрокверцетином защищает капилляры, почечный комплекс регулирует давление через водно-солевой баланс.\n\nДля тех, у кого давление скачет, отёки к вечеру и слабое кровообращение."}, "complex-f": {"brand": "КОМПЛЕКС «F» «Мужская сила и тонус»", "short": "Мужская сила", "desc": "Почечный комплекс восстанавливает базовую энергию, напиток с дигидрокверцетином ускоряет восстановление, таблетки Ангелика Кейске улучшают доставку питания к тканям.\n\nДля тех, кто чувствует упадок сил и снижение мужского тонуса."}, "complex-g": {"brand": "КОМПЛЕКС «G» «Женское здоровье»", "short": "Женский баланс", "desc": "Интимный бактериостатический комплекс восстанавливает микрофлору, почечный комплекс нормализует гормональный баланс и снижает ПМС, фруктово-овощные таблетки контролируют аппетит.\n\nДля тех, у кого гормональный дисбаланс, ПМС и тяга к перекусам."}, "complex-h": {"brand": "КОМПЛЕКС «H» «Антиоксидант и детокс»", "short": "Иммунитет · детокс", "desc": "Напиток с дигидрокверцетином нейтрализует свободные радикалы, таблетки Лотос и Боярышник очищают кишечник, таблетки Ангелика Кейске очищают кровь и сосуды.\n\nДля тех, у кого ощущение зашлакованности, тяжесть без причины, хронический стресс."}, "complex-i": {"brand": "КОМПЛЕКС «I» «Глаза и экранная усталость»", "short": "Зрение · глаза", "desc": "Глазной стик снимает усталость снаружи, напиток с дигидрокверцетином защищает сетчатку изнутри, таблетки улучшают микроциркуляцию в капиллярах глаза.\n\nДля тех, чьи глаза краснеют и устают после работы за экраном."}, "complex-j": {"brand": "КОМПЛЕКС «J» «Лёгкий старт»", "short": "Энергия · тонус", "desc": "Базовая программа: таблетки Лотос и Боярышник очищают кишечник и открывают путь для усвоения питательных веществ, почечный комплекс восстанавливает базовую энергию и тонус.\n\nДля тех, кто хочет попробовать продукцию JIMON с чего-то простого и понятного."}};
+const ALL_ITEMS = Object.assign({}, PRODUCTS, COMPLEXES);
+
+function toggleDesc(el){
+  const desc = el.parentElement.nextElementSibling;
+  desc.classList.toggle('open');
+  el.textContent = desc.classList.contains('open') ? 'скрыть' : 'подробнее';
+}
+
+// ===== МОДАЛЬНОЕ ОКНО ЧАТА С ПЭН =====
+let pengModalHistory = [];
+let pengModalProductContext = '';
+
+function openPengModalByKey(btn){
+  const key = btn.getAttribute('data-key');
+  const p = ALL_ITEMS[key];
+  if(!p) return;
+  openPengModal(p.brand, p.desc);
+}
+
+function openPengModal(brand, desc){
+  pengModalHistory = [];
+  pengModalProductContext = brand + '. ' + desc;
+  document.getElementById('pengModalProduct').textContent = brand;
+  document.getElementById('pengModalMessages').innerHTML = '';
+  document.getElementById('pengModalInputRow').style.display = 'flex';
+  document.getElementById('pengModalCta').classList.remove('show');
+  document.getElementById('pengModalLimit').textContent = 'Бесплатных вопросов сегодня: 10';
+  document.getElementById('pengModal').classList.add('open');
+  addPmMsg('peng', 'Здравствуйте! 🌿 Я Пэн. Спросите меня что угодно про этот товар.');
+  document.getElementById('pengModalInput').focus();
+}
+function closePengModal(){
+  document.getElementById('pengModal').classList.remove('open');
+}
+document.getElementById('pengModal').addEventListener('click', function(e){
+  if(e.target.id === 'pengModal') closePengModal();
+});
+
+function addPmMsg(from, text){
+  const wrap = document.getElementById('pengModalMessages');
+  const el = document.createElement('div');
+  el.className = 'pm-msg ' + from;
+  el.textContent = text;
+  wrap.appendChild(el);
+  wrap.scrollTop = wrap.scrollHeight;
+}
+function showPmTyping(){
+  const wrap = document.getElementById('pengModalMessages');
+  const el = document.createElement('div');
+  el.className = 'pm-typing'; el.id = 'pmTyping';
+  el.innerHTML = '<span></span><span></span><span></span>';
+  wrap.appendChild(el);
+  wrap.scrollTop = wrap.scrollHeight;
+}
+function removePmTyping(){
+  const t = document.getElementById('pmTyping');
+  if(t) t.remove();
+}
+
+async function sendCatalogPeng(){
+  const input = document.getElementById('pengModalInput');
+  const text = input.value.trim();
+  if(!text) return;
+  addPmMsg('user', text);
+  input.value = '';
+  input.disabled = true;
+  showPmTyping();
+  try{
+    const res = await fetch('https://jimongramm.com/api/catalog-peng', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ message: text, productContext: pengModalProductContext, history: pengModalHistory })
+    });
+    const data = await res.json();
+    removePmTyping();
+    if(data.limitReached){
+      addPmMsg('peng', 'Это был ваш последний бесплатный вопрос на сегодня 🌿 Чтобы продолжить — станьте партнёром JimonGramm.');
+      document.getElementById('pengModalInputRow').style.display = 'none';
+      document.getElementById('pengModalCta').classList.add('show');
+      document.getElementById('pengModalLimit').textContent = 'Лимит на сегодня исчерпан';
+    } else {
+      addPmMsg('peng', data.reply || 'Извините, не получилось ответить.');
+      pengModalHistory.push({ role:'user', content: text });
+      pengModalHistory.push({ role:'assistant', content: data.reply || '' });
+      document.getElementById('pengModalLimit').textContent = 'Бесплатных вопросов сегодня: ' + (data.remaining ?? '—');
+    }
+  } catch(e){
+    removePmTyping();
+    addPmMsg('peng', 'Извините, произошла ошибка соединения. Попробуйте ещё раз.');
+  }
+  input.disabled = false;
+  input.focus();
+}
+</script>
+</body>
+</html>
