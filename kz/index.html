@@ -769,11 +769,11 @@ if (urlInterestParam === 'client' || urlInterestParam === 'partner') {
   const prefix = urlProductParam ? urlProductParam : 'каталог';
   catalogInterestLabel = prefix + '-' + (urlInterestParam === 'client' ? 'клиент' : 'партнёр');
   openLeadModal('Каталог');
-  window.history.replaceState({}, '', '/kz/index.html');
+  window.history.replaceState({}, '', window.location.pathname);
 }
 if (new URLSearchParams(window.location.search).get('openModal') === '1') {
   openLeadModal('Страница технологии');
-  window.history.replaceState({}, '', '/kz/index.html');
+  window.history.replaceState({}, '', window.location.pathname);
 }
 function closeLeadModal(){
   document.getElementById('leadModal').classList.remove('open');
