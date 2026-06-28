@@ -140,6 +140,10 @@
   .nav-logo-text{font-weight:800; color:var(--green-deep); font-size:0.95rem; line-height:1.15; white-space:nowrap;}
   .nav-logo-sub{font-size:0.68rem; color:var(--text3); letter-spacing:0.5px; font-weight:600;}
   .nav-region-pill{font-size:0.72rem; font-weight:700; color:var(--green-deep); background:rgba(201,162,39,0.16); border:1px solid rgba(201,162,39,0.3); padding:5px 12px; border-radius:20px; margin-left:6px; white-space:nowrap;}
+  .lang-switch{display:flex; border:1.5px solid var(--gold); border-radius:10px; overflow:hidden; font-size:12px; font-weight:700; height:34px; flex-shrink:0;}
+.lang-switch a,.lang-switch span{padding:0 13px; display:flex; align-items:center; text-decoration:none; color:var(--text3); background:var(--paper); transition:background .15s; white-space:nowrap;}
+.lang-switch a:hover{background:rgba(201,162,39,0.12);}
+.lang-switch .lang-active{background:var(--gold); color:var(--green-deep); cursor:default; pointer-events:none;}
   .nav-btn{padding:10px 22px; border-radius:30px; font-size:0.85rem; font-weight:700; cursor:pointer; text-decoration:none; background:linear-gradient(135deg,var(--gold),var(--gold-light)); color:var(--green-deep); transition:all .2s; white-space:nowrap; border:2px solid #16321F;}
   .nav-btn:hover{transform:translateY(-1px); box-shadow:0 6px 18px rgba(201,162,39,0.35);}
   @media(max-width:480px){.nav-btn{padding:8px 14px; font-size:0.72rem;}}
@@ -316,7 +320,12 @@
     <img src="/images/logo-jimon.png" alt="JIMON GROUP" class="nav-logo-img">
     <div><div class="nav-logo-text">JIMON GROUP</div><div class="nav-logo-sub">Қазақстан</div></div>
 </a>
- <div class="nav-contact-wrap">
+ <div style="display:flex; align-items:center; gap:10px;">
+  <div class="lang-switch">
+    <a href="/index.html">РУ</a>
+    <span class="lang-active">ҚАЗ</span>
+  </div>
+  <div class="nav-contact-wrap">
     <button class="nav-btn" onclick="toggleContactMenu()">Мәзір</button>
     <div class="nav-contact-menu" id="contactMenu">
   <a href="/kz/about.html" class="contact-menu-item">Компания туралы</a>
@@ -328,8 +337,9 @@
   <a href="https://max.ru/u/f9LHodD0cOKnHRZnfCYKMqkxpgnByIZTcAc7JrC-EhSDi47lkK787lvsYjE" target="_blank" class="contact-menu-item">💬 Max</a>
   <div style="height:1px; background:var(--border); margin:4px 8px;"></div>
   <a href="/index.html" class="contact-menu-item">🇷🇺 Русский</a>
-</div>
-  </div>
+</div>   
+  </div>  
+</div>  
 </nav>
 
 <!-- HERO -->
