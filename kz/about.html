@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/icons/icon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/icon-180x180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JIMON GROUP компаниясы туралы — тарихы, философиясы, ДҮХ мирасы</title>
+<meta name="description" content="JIMON GROUP қытай медицинасының мың жылдық дәстүрін жалғастырады. Компания тарихы, У-Син философиясы, өз плантациялары және ғылыми база.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jimongroup.kz/kz/about.html">
+<link rel="alternate" hreflang="ru-RU" href="https://jimon-group.ru/about.html" />
+<link rel="alternate" hreflang="ru-KZ" href="https://jimongroup.kz/about.html" />
+<link rel="alternate" hreflang="kk-KZ" href="https://jimongroup.kz/kz/about.html" />
+<link rel="alternate" hreflang="x-default" href="https://jimongroup.kz/about.html" />
+
+<style>
+  :root{
+    --ivory:#FAF6EC; --ivory2:#F3EDDA; --paper:#FFFFFF;
+    --green-deep:#16321F; --green:#1F4A30; --green-soft:#3C6B49;
+    --gold:#C9A227; --gold-light:#E3C158;
+    --text:#212B22; --text2:#5B6B5D; --text3:#8A968B;
+    --border: rgba(22,50,31,0.12); --radius:18px; --radius-lg:26px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Manrope',system-ui,-apple-system,sans-serif; background:var(--ivory); color:var(--text); line-height:1.7;}
+  h1,h2{font-family:'Noto Serif SC','Georgia',serif; font-weight:700;}
+
+  nav{position:sticky; top:0; z-index:50; background:rgba(250,246,236,0.95); backdrop-filter:blur(14px); border-bottom:1px solid var(--border); padding:0 24px; height:64px; display:flex; align-items:center; justify-content:space-between;}
+  .nav-logo{display:flex; align-items:center; gap:10px; text-decoration:none;}
+  .nav-logo-badge{width:36px; height:36px; border-radius:9px; background:linear-gradient(160deg,#2a5c39,var(--green-deep)); display:flex; align-items:center; justify-content:center; font-size:16px; color:var(--gold-light); font-weight:700;}
+  .nav-logo-text{font-weight:800; color:var(--green-deep); font-size:1rem;}
+  .back-link{font-size:0.85rem; color:var(--green); text-decoration:none; font-weight:600;}
+  .back-link:hover{color:var(--gold);}
+
+  .header{padding:54px 24px 36px; text-align:center; max-width:720px; margin:0 auto;}
+  .section-tag{display:inline-flex; align-items:center; gap:8px; background:rgba(201,162,39,0.12); color:var(--green); font-size:0.74rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:6px 16px; border-radius:20px; margin-bottom:18px;}
+  .header h1{font-size:clamp(1.8rem,3.8vw,2.5rem); color:var(--green-deep); margin-bottom:14px;}
+  .header p{color:var(--text2); font-size:1rem;}
+
+  .container{max-width:760px; margin:0 auto; padding:0 24px 70px;}
+  section.block{margin-bottom:48px;}
+  .block-tag{font-size:0.74rem; font-weight:700; color:var(--green-soft); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px;}
+  .block-title{font-size:1.5rem; color:var(--green-deep); margin-bottom:14px; font-family:'Noto Serif SC',serif;}
+  .block p{color:var(--text2); font-size:0.96rem; margin-bottom:14px;}
+  .block p strong{color:var(--green-deep);}
+
+  .quote-block{background:linear-gradient(160deg,#1d4129,var(--green-deep)); border-radius:var(--radius-lg); padding:36px; color:var(--ivory); text-align:center; margin:20px 0;}
+  .quote-block p{color:rgba(250,246,236,0.9); font-size:1.1rem; line-height:1.6; font-family:'Noto Serif SC',serif; margin:0;}
+  .quote-block em{color:var(--gold-light); font-style:normal;}
+
+  .timeline{position:relative; padding-left:28px; border-left:2px solid rgba(31,74,48,0.2); margin-top:24px;}
+  .t-item{position:relative; margin-bottom:24px;}
+  .t-item::before{content:''; position:absolute; left:-37px; top:4px; width:12px; height:12px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 3px rgba(201,162,39,0.2);}
+  .t-year{color:var(--gold); font-weight:700; font-size:0.95rem; font-family:'Noto Serif SC',serif;}
+  .t-text{color:var(--text2); font-size:0.9rem;}
+
+  .pillars{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:8px;}
+  .pillar-card{background:var(--paper); border:1px solid var(--border); border-radius:var(--radius); padding:22px;}
+  .pillar-icon{font-size:1.6rem; margin-bottom:10px;}
+  .pillar-title{font-weight:700; color:var(--green-deep); margin-bottom:6px; font-size:0.98rem;}
+  .pillar-desc{font-size:0.86rem; color:var(--text2);}
+
+  .cta-block{text-align:center; margin-top:50px; padding:40px; background:linear-gradient(165deg,#1d4129,var(--green-deep)); border-radius:var(--radius-lg); color:var(--ivory);}
+  .cta-block h2{color:var(--ivory); font-size:1.4rem; margin-bottom:12px;}
+  .btn-primary{display:inline-flex; padding:15px 32px; border-radius:14px; background:linear-gradient(135deg,var(--gold),var(--gold-light)); color:var(--green-deep); font-weight:700; text-decoration:none; border:2px solid var(--green-deep);}
+
+  footer{text-align:center; padding:30px 24px; color:var(--text3); font-size:0.8rem;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/kz/" class="nav-logo">
+    <div class="nav-logo-badge">鹏</div>
+    <div class="nav-logo-text">JIMON GROUP</div>
+  </a>
+  <a href="/kz/" class="back-link">← Басты бетке</a>
+</nav>
+
+<div class="header">
+  <div class="section-tag">Компания туралы</div>
+  <h1>Бұл стартап емес. <em style="color:var(--gold); font-style:normal;">Дәстүрдің жалғасы.</em></h1>
+  <p>JIMON GROUP рецепттерді қайтадан жасамайды — компания оларды сақтап, дамытады, ғасырлар бойғы тарихы бар брендтерді бір атау астына біріктіреді.</p>
+</div>
+
+<div class="container">
+
+  <section class="block">
+    <div class="block-tag">Мирасы</div>
+    <div class="block-title">Ғасырлар бойғы дәстүр, заманауи компания</div>
+    <p>Дәстүрлі қытай медицинасының тарихы <strong>1000 жылдан асады</strong>. Бес элемент жүйесі У-Син (Ағаш, От, Жер, Металл, Су) мың жылдар бойы дәрігерлік тәжірибеде қолданылады — заманауи фармакология пайда болғанға дейін де.</p>
+    <p>JIMON GROUP компаниясы <strong>1993 жылы</strong> Қытайда «дәстүрлі медицина астанасы» аталатын Аньго қаласында құрылды. Бүгінде бұл «1+6+1» өндірістік құрылымы бар, шамамен <strong>2000 қызметкері</strong> бар топ. Оның құрамында әрқайсысының ғасырлық тарихы бар дәстүрлі қытай медицинасының <strong>4 бренді</strong> бар, олар шамамен <strong>300 дәрі-дәрмек тіркеу куәлігін</strong>, <strong>30 ұлттық патентті</strong> және <strong>11 эксклюзивті өнімді</strong> біріктіреді.</p>
+
+    <div class="quote-block">
+      <p>«Мәнін мирас ету, тұтастық пен инновацияны сақтау»<br><em>— компанияның жұмысындағы негізгі принцип</em></p>
+    </div>
+
+    <div class="timeline">
+      <div class="t-item"><div class="t-year">1000+ жыл бұрын</div><div class="t-text">Дәстүрлі қытай медицинасының негіздері және У-Син бес элемент жүйесінің пайда болуы.</div></div>
+      <div class="t-item"><div class="t-year">100+ жыл бұрын</div><div class="t-text">Кейіннен JIMON тобының 4 ДҮХ брендінің құрамына кірген рецептілік үйлердің ашылуы.</div></div>
+      <div class="t-item"><div class="t-year">1993</div><div class="t-text">JIMON GROUP-тың Хэбэй провинциясының Аньго қаласында заманауи «1+6+1» өндірістік құрылымымен ресми құрылуы.</div></div>
+      <div class="t-item"><div class="t-year">2025</div><div class="t-text">Шанхай супер-зертханасымен стратегиялық ғылыми әріптестік жасалды, компания өнімі Сингапур, Малайзия және басқа елдердің нарықтарына шығады.</div></div>
+      <div class="t-item"><div class="t-year">2026</div><div class="t-text">Қазақстан мен Ресейде серіктестік бағдарламасының ресми басталуы.</div></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="block-tag">Ғылым</div>
+    <div class="block-title">Дәстүр ғана емес, ғылыми негіз де</div>
+    <p>Компания <strong>6 ірі ғылыми-зерттеу ұйымдарымен</strong> ынтымақтасады, соның ішінде Тяньцзинь дәстүрлі қытай медицинасы университеті мен Қытай медициналық ғылымдары академиясы бар. Топ жанында Хэбэй провинциясының ДҮХ-индустрия технологиялары бойынша өз ғылыми-зерттеу институты жұмыс істейді.</p>
+    <p>Компания өнімі <strong>Сингапур, Оңтүстік Корея, Жапония, Австралия, Канада, Индонезия, Малайзия және Словакияға</strong> жеткізіледі — бұл бренд тек жергілікті деңгейде ғана емес, халықаралық деңгейде де танылғанын көрсетеді.</p>
+  </section>
+
+  <section class="block">
+    <div class="block-tag">Әлеуметтік жауапкершілік</div>
+    <div class="block-title">Бизнестен тыс үлес</div>
+    <p>Компания қайырымдылыққа <strong>50 миллион юаньнан астам</strong> сомаға материал бөлді, сондай-ақ шикізат өсірілетін аймақтардың жергілікті экономикасының дамуына ықпал ете отырып, <strong>10 000 акрдан астам</strong> ДҮХ плантация базаларын құрды.</p>
+  </section>
+
+  <section class="block">
+    <div class="block-tag">Өндіріс</div>
+    <div class="block-title">Даладан формулаға дейін, делдалсыз</div>
+    <p>JIMON GROUP-тың <strong>дәрілік өсімдіктерінің өз плантациялары</strong> бар. Бұл жай ғана формальдылық емес: сапа бақылауы дайын өнім қоймасында емес, болашақ формулалардың құрамдас бөліктері өсетін топырақтың өзінде басталады.</p>
+    <p>Өндіріс халықаралық стандарттар бойынша сертификатталған — құжаттардың түпнұсқаларын және толық ақпаратты <a href="/kz/documentation.html" style="color:var(--green); font-weight:600;">құжаттама</a> бетінде қараңыз.</p>
+  </section>
+
+  <section class="block">
+    <div class="block-tag">Философия</div>
+    <div class="block-title">Неге дәл У-Син</div>
+    <p>«Бір симптом — бір таблетка» логикасынан өзгеше, дәстүрлі қытай медицинасы адамды бір-бірімен байланысты бес элементтің жүйесі ретінде қарастырады. Олардың біреуі әлсіреген кезде, бұл жалпы самалуға әсер етеді, нақты бір жерге ғана емес.</p>
+    <p>Сондықтан JIMON GROUP өнімдері жеке «бір нәрсеге қарсы құрал» ретінде емес, нақты элементті — бүйрек, бауыр, жүректі — қолдау ретінде, организмге шынымен жетіспейтін нәрсені толтыру арқылы жасалады.</p>
+
+    <div class="pillars">
+      <div class="pillar-card"><div class="pillar-icon">🌳</div><div class="pillar-title">Ағаш</div><div class="pillar-desc">Бауыр, эмоциялық тепе-теңдік, тән мен шешімнің икемділігі.</div></div>
+      <div class="pillar-card"><div class="pillar-icon">🔥</div><div class="pillar-title">От</div><div class="pillar-desc">Жүрек, қан айналымы және өмірлік энергия.</div></div>
+      <div class="pillar-card"><div class="pillar-icon">⛰️</div><div class="pillar-title">Жер</div><div class="pillar-desc">Көк бауыр, ас қорыту және қоректік заттарды сіңіру.</div></div>
+      <div class="pillar-card"><div class="pillar-icon">⚙️</div><div class="pillar-title">Металл</div><div class="pillar-desc">Өкпе, иммунитет және тыныс алу жүйесінің жұмысы.</div></div>
+      <div class="pillar-card"><div class="pillar-icon">💧</div><div class="pillar-title">Су</div><div class="pillar-desc">Бүйрек, өмірлік күш және төзімділіктің негізі.</div></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="block-tag">Технология</div>
+    <div class="block-title">Технологиямен үндескен дәстүр</div>
+    <p>JimonGramm — JIMON GROUP серіктестеріне У-Син білімдерін тәжірибеде қолдануға көмектесетін Пэн ЖИ-кеңесшісі бар қосымша: клиентпен сөйлесу, оның жағдайын түсіну және шешімдер ұсыну. Толығырақ — <a href="/kz/jimongramm.html" style="color:var(--green); font-weight:600;">технология</a> бетінде.</p>
+  </section>
+
+  <div class="cta-block">
+    <h2>Осы тарихтың бөлігі болғыңыз келе ме?</h2>
+    <p style="color:rgba(250,246,236,0.7); margin-bottom:20px;">Куратор аймағыңызда JIMON GROUP-пен жолды қалай бастау керектігін толық айтып береді.</p>
+    <a href="/kz/index.html#lead" class="btn-primary">Серіктес болу →</a>
+  </div>
+</div>
+
+<footer>© 2026 JIMON GROUP · <a href="/kz/" style="color:var(--green);">jimongroup.kz</a><br><a href="/kz/about.html" style="color:var(--green);">Компания туралы</a> · <a href="/kz/catalog.html" style="color:var(--green);">Каталог</a> · <a href="/kz/marketing-plan.html" style="color:var(--green);">Маркетинг-жоспар</a> · <a href="/kz/documentation.html" style="color:var(--green);">Құжаттама</a> · <a href="/kz/privacy.html" style="color:var(--green);">Құпиялылық</a></footer>
+
+</body>
+</html>
