@@ -769,11 +769,9 @@ if (urlInterestParam === 'client' || urlInterestParam === 'partner') {
   const prefix = urlProductParam ? urlProductParam : 'каталог';
   catalogInterestLabel = prefix + '-' + (urlInterestParam === 'client' ? 'клиент' : 'партнёр');
   openLeadModal('Каталог');
-  if(sessionStorage.getItem('returnTo')){location.href=sessionStorage.getItem('returnTo'); sessionStorage.removeItem('returnTo');}
 }
 if (new URLSearchParams(window.location.search).get('openModal') === '1') {
   openLeadModal('Страница технологии');
-  if(sessionStorage.getItem('returnTo')){location.href=sessionStorage.getItem('returnTo'); sessionStorage.removeItem('returnTo');}
 }
 function closeLeadModal(){
   document.getElementById('leadModal').classList.remove('open');
