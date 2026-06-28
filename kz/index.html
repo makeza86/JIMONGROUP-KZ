@@ -756,6 +756,7 @@ function checkCustomMethod(){
   document.getElementById('m-method-custom').style.display = (method === 'Другой') ? 'block' : 'none';
 }
 let leadButtonSource = 'Көрсетілмеген';
+  let openedViaModalParam = false;
 function openLeadModal(buttonLabel){
   leadButtonSource = buttonLabel || 'Көрсетілмеген';
   document.getElementById('leadModal').classList.add('open');
@@ -768,14 +769,16 @@ const urlProductParam = new URLSearchParams(window.location.search).get('product
 if (urlInterestParam === 'client' || urlInterestParam === 'partner') {
   const prefix = urlProductParam ? urlProductParam : 'каталог';
   catalogInterestLabel = prefix + '-' + (urlInterestParam === 'client' ? 'клиент' : 'партнёр');
+  openedViaModalParam = true;
   openLeadModal('Каталог');
 }
 if (new URLSearchParams(window.location.search).get('openModal') === '1') {
+  openedViaModalParam = true;
   openLeadModal('Страница технологии');
 }
 function closeLeadModal(){
   document.getElementById('leadModal').classList.remove('open');
-  if (new URLSearchParams(window.location.search).get('openModal') === '1' && document.referrer && document.referrer.includes(location.hostname)) {
+ if (openedViaModalParam && document.referrer && document.referrer.includes(location.hostname)) {
     location.href = document.referrer;
   }
 }
