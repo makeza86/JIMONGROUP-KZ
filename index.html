@@ -880,11 +880,14 @@ document.addEventListener('click', function(e){
 </div>
 
 <script>
-function openJimonReg(){
+let jrLabel = 'Стать партнёром';
+function openJimonReg(label){
+  jrLabel = label || 'Стать партнёром';
   document.getElementById('jimonRegOverlay').style.display='flex';
   document.getElementById('jrStep1').style.display='block';
   document.getElementById('jrStep2').style.display='none';
   document.getElementById('jrStep3').style.display='none';
+  document.querySelector('#jrStep1 h3').textContent = '✦ ' + jrLabel + ' JIMON GROUP';
 }
 function closeJimonReg(){
   document.getElementById('jimonRegOverlay').style.display='none';
@@ -904,7 +907,8 @@ async function jrSendSms(){
       document.getElementById('jrStep1').style.display='none';
       document.getElementById('jrStep2').style.display='block';
     } else {
-      err.textContent = d.msg || 'Ошибка отправки SMS'; err.style.display='block';
+      const msgRu = {'手机号已存在':'Этот номер уже зарегистрирован','手机号已存在，无法注册':'Этот номер уже зарегистрирован','验证码错误':'Неверный код','发送失败':'Ошибка отправки SMS'};
+      err.textContent = msgRu[d.msg] || d.msg || 'Ошибка отправки SMS'; err.style.display='block';
     }
   }catch(e){ err.textContent='Ошибка соединения'; err.style.display='block'; }
   btn.textContent='Получить SMS-код'; btn.disabled=false;
@@ -919,7 +923,7 @@ async function jrRegister(){
   err.style.display='none';
   const btn = event.target; btn.textContent='Регистрируем...'; btn.disabled=true;
   try{
-    const r = await fetch('https://jimongramm.com/api/jimon-register',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone,area_code:area,code,country:'1',name,source:'jimongroup.kz — Стать партнёром'})});
+    const r = await fetch('https://jimongramm.com/api/jimon-register',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone,area_code:area,code,country:'1',name,source:'jimongroup.kz — ' + jrLabel})});
     const d = await r.json();
     if(d.ok){
       document.getElementById('jrStep2').style.display='none';
@@ -930,9 +934,11 @@ async function jrRegister(){
   }catch(e){ err.textContent='Ошибка соединения'; err.style.display='block'; }
   btn.textContent='Подтвердить и зарегистрироваться'; btn.disabled=false;
 }
-</script>
-  <script>
-window.openLeadModal = function(label){ openJimonReg(); };
+window.openLeadModal = function(label){
+  let l = 'Стать партнёром';
+  if(label && label.indexOf('клиент') !== -1) l = 'Стать клиентом';
+  openJimonReg(l);
+};
 </script>
 </body>
 </html>
