@@ -776,20 +776,22 @@ function openLeadModal(buttonLabel){
   document.getElementById('modalSuccessView').style.display = 'none';
 }
 let catalogInterestLabel = '';
-const urlInterestParam = new URLSearchParams(window.location.search).get('interest');
-const urlProductParam = new URLSearchParams(window.location.search).get('product');
-if (urlInterestParam === 'client' || urlInterestParam === 'partner') {
-  const prefix = urlProductParam ? urlProductParam : 'каталог';
-  catalogInterestLabel = prefix + '-' + (urlInterestParam === 'client' ? 'клиент' : 'партнёр');
-  openedViaModalParam = true;
-  openLeadModal('Каталог');
-  window.history.replaceState({}, '', '/index.html');
-}
-if (new URLSearchParams(window.location.search).get('openModal') === '1') {
-  openedViaModalParam = true;
-  openLeadModal('Страница технологии');
-  window.history.replaceState({}, '', '/index.html');
-}
+window.addEventListener('load', function(){
+  const urlInterestParam = new URLSearchParams(window.location.search).get('interest');
+  const urlProductParam = new URLSearchParams(window.location.search).get('product');
+  if (urlInterestParam === 'client' || urlInterestParam === 'partner') {
+    const prefix = urlProductParam ? urlProductParam : 'каталог';
+    catalogInterestLabel = prefix + '-' + (urlInterestParam === 'client' ? 'клиент' : 'партнёр');
+    openedViaModalParam = true;
+    openLeadModal(urlInterestParam === 'client' ? 'Стать клиентом' : 'Стать партнёром');
+    window.history.replaceState({}, '', '/index.html');
+  }
+  if (new URLSearchParams(window.location.search).get('openModal') === '1') {
+    openedViaModalParam = true;
+    openLeadModal('Стать партнёром');
+    window.history.replaceState({}, '', '/index.html');
+  }
+});
 function closeLeadModal(){
   document.getElementById('leadModal').classList.remove('open');
   if (openedViaModalParam && document.referrer && document.referrer.includes(location.hostname)) {
