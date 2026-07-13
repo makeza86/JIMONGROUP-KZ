@@ -1,39 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Главная страница -->
   <url>
     <loc>https://jimongroup.kz/</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://jimongroup.kz/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://jimongroup.kz/kz/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jimongroup.kz/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jimongroup.kz/"/>
   </url>
+
+  <!-- Казахская версия главной -->
+  <url>
+    <loc>https://jimongroup.kz/kz/index.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://jimongroup.kz/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://jimongroup.kz/kz/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jimongroup.kz/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jimongroup.kz/"/>
+  </url>
+
+  <!-- Английская версия главной -->
+  <url>
+    <loc>https://jimongroup.kz/en/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://jimongroup.kz/"/>
+    <xhtml:link rel="alternate" hreflang="kk" href="https://jimongroup.kz/kz/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jimongroup.kz/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jimongroup.kz/"/>
+  </url>
+
+  <!-- Каталог -->
   <url>
     <loc>https://jimongroup.kz/catalog.html</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- О компании -->
   <url>
     <loc>https://jimongroup.kz/about.html</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- JimonGramm / Пэн -->
   <url>
     <loc>https://jimongroup.kz/jimongramm.html</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Маркетинг-план -->
   <url>
     <loc>https://jimongroup.kz/marketing-plan.html</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Документация -->
   <url>
     <loc>https://jimongroup.kz/documentation.html</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- Политика конфиденциальности -->
+  <url>
+    <loc>https://jimongroup.kz/privacy.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
