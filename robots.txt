@@ -2,8 +2,22 @@ User-agent: *
 Allow: /
 Disallow: /privacy.html
 
+User-agent: Googlebot
+Allow: /
+Disallow: /privacy.html
+
 User-agent: Yandex
 Allow: /
 Disallow: /privacy.html
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
 
 Sitemap: https://jimongroup.kz/sitemap.xml
