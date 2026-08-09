@@ -462,6 +462,23 @@ function toggleDesc(el){
 let pengModalHistory = [];
 let pengModalProductContext = '';
 
+const CATALOG_LIMIT_KEY = 'peng_catalog_limit_date';
+function isCatalogPengLimited(){
+  return localStorage.getItem(CATALOG_LIMIT_KEY) === new Date().toISOString().slice(0,10);
+}
+function showCatalogLimitReached(){
+  addPmMsg('peng', 'Сіз бүгін 10 тегін сұрақты пайдаландыңыз 🌿 Тікелей жазған дұрыс — мессенджерде жылдамырақ жауап беремін.');
+  document.getElementById('pengModalInputRow').style.display = 'none';
+  document.getElementById('pengModalLimit').textContent = 'Бүгінгі лимит таусылды';
+  const waText = encodeURIComponent('Сәлеметсіз бе! JIMON GROUP туралы көбірек білгім келеді және серіктес болғым келеді.');
+  document.getElementById('pengModalCta').innerHTML = `
+  <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+    <a href="https://wa.me/77085080130?text=${waText}" target="_blank" class="btn-primary" style="margin-top:0; text-decoration:none;">📱 WhatsApp</a>
+    <a href="https://max.ru/u/f9LHodD0cOKnHRZnfCYKMqkxpgnByIZTcAc7JrC-EhSDi47lkK787lvsYjE" target="_blank" class="btn-primary" style="margin-top:0; background:transparent; color:var(--gold-light); border:2px solid var(--gold); text-decoration:none;">💬 MAX</a>
+  </div>`;
+  document.getElementById('pengModalCta').classList.add('show');
+}
+
 function openPengModalByKey(btn){
   const key = btn.getAttribute('data-key');
   const p = ALL_ITEMS[key];
@@ -480,6 +497,7 @@ function openPengModal(brand, desc){
   document.getElementById('pengModal').classList.add('open');
   addPmMsg('peng', 'Сәлеметсіз бе! 🌿 Мен Пэн. Бұл тауар туралы маған кез келген нәрсе сұраңыз.');
   document.getElementById('pengModalInput').focus();
+  if (isCatalogPengLimited()) { showCatalogLimitReached(); }
 }
 function closePengModal(){
   document.getElementById('pengModal').classList.remove('open');
@@ -513,6 +531,11 @@ async function sendCatalogPeng(){
   const input = document.getElementById('pengModalInput');
   const text = input.value.trim();
   if(!text) return;
+  if(isCatalogPengLimited()){
+    input.value = '';
+    showCatalogLimitReached();
+    return;
+  }
   addPmMsg('user', text);
   input.value = '';
   input.disabled = true;
@@ -525,10 +548,8 @@ async function sendCatalogPeng(){
     const data = await res.json();
     removePmTyping();
     if(data.limitReached){
-      addPmMsg('peng', 'Бұл бүгінгі соңғы тегін сұрағыңыз болды 🌿 Жалғастыру үшін JimonGramm серіктесі болыңыз.');
-      document.getElementById('pengModalInputRow').style.display = 'none';
-      document.getElementById('pengModalCta').classList.add('show');
-      document.getElementById('pengModalLimit').textContent = 'Бүгінгі лимит таусылды';
+      localStorage.setItem(CATALOG_LIMIT_KEY, new Date().toISOString().slice(0,10));
+      showCatalogLimitReached();
     } else {
       addPmMsg('peng', data.reply || 'Кешіріңіз, жауап беру мүмкін болмады.');
       pengModalHistory.push({ role:'user', content: text });
