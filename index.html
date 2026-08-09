@@ -467,7 +467,7 @@
           <input type="text" id="pengRealInput" class="chat-input-fake" placeholder="Расскажите, что вас беспокоит..." style="border:none; outline:none; font-family:inherit;" onkeypress="if(event.key==='Enter') sendToPeng()">
           <button class="chat-send-btn" onclick="sendToPeng()">→</button>
         </div>
-        <div id="pengLimitBadge" style="text-align:center; font-size:0.75rem; color:rgba(250,246,236,0.4); margin-top:8px;">Бесплатных вопросов: 3</div>
+        <div id="pengLimitBadge" style="text-align:center; font-size:0.75rem; color:rgba(250,246,236,0.4); margin-top:8px;">Бесплатных вопросов: 10</div>
       </div>
     </div>
 
@@ -591,9 +591,13 @@
           </select>
           <input class="form-input modal-input" id="m-city-custom" placeholder="Укажите город" style="display:none; margin-top:8px;">
         </div>
-        <div class="form-field full">
+        <div class="form-field">
           <label class="form-label modal-label">Имя</label>
           <input class="form-input modal-input" id="m-name" placeholder="Ваше имя">
+        </div>
+        <div class="form-field">
+          <label class="form-label modal-label">Фамилия</label>
+          <input class="form-input modal-input" id="m-surname" placeholder="Ваша фамилия">
         </div>
         <div class="form-field">
           <label class="form-label modal-label">Код страны</label>
@@ -617,27 +621,21 @@
           <label class="form-label modal-label">Номер телефона</label>
           <input class="form-input modal-input" id="m-phone" placeholder="700 123 45 67">
         </div>
-        <div class="form-field full">
-          <label class="form-label modal-label">Способ связи</label>
-          <select class="form-input modal-input" id="m-method" onchange="checkCustomMethod()">
-            <option value="WhatsApp">WhatsApp</option>
-            <option value="Telegram">Telegram</option>
-            <option value="Max">Max</option>
-            <option value="Другой">Другой способ</option>
-          </select>
-          <input class="form-input modal-input" id="m-method-custom" placeholder="Укажите способ связи" style="display:none; margin-top:8px;">
-        </div>
       </div>
-      <button class="form-submit" onclick="submitLead()">Отправить заявку →</button>
+      <button class="form-submit" onclick="submitLead()">Продолжить →</button>
       <div class="form-note modal-note">Ваши данные защищены и не передаются третьим лицам.</div>
     </div>
 
-    <div id="modalSuccessView" style="display:none; text-align:center;">
+    <div id="modalMessengerView" style="display:none; text-align:center;">
       <div class="form-success-icon">🎉</div>
-      <div class="form-success-title">Поздравляем, заявка принята!</div>
-      <p class="modal-success-text">Официальный менеджер вашего региона свяжется с вами в самое ближайшее время.</p>
-      <p class="modal-success-wish">Желаем крепкого здоровья и успешного старта в команде JIMON GROUP 🌿</p>
-      <button class="btn-secondary" style="margin-top:20px; border:none; cursor:pointer;" onclick="closeLeadModal()">Продолжить на сайте</button>
+      <div class="form-success-title">Отлично, осталось написать нам!</div>
+      <p class="modal-success-text">Мы работаем напрямую с лидером команды — из-за особенностей номера он пока не может написать первым. Нажмите на кнопку ниже, откроется мессенджер с готовым сообщением — просто отправьте его 😊</p>
+      <div class="messenger-btns" style="display:flex; flex-direction:column; gap:12px; margin-top:20px;">
+        <a id="m-whatsapp-link" href="#" target="_blank" class="btn-primary" style="text-decoration:none; display:block;">📱 Написать в WhatsApp</a>
+        <a id="m-max-link" href="#" target="_blank" class="btn-secondary" style="text-decoration:none; display:block; border:none; cursor:pointer;">💬 Написать в MAX</a>
+      </div>
+      <p class="modal-success-wish" style="margin-top:16px;">Желаем крепкого здоровья и успешного старта в команде JIMON GROUP 🌿</p>
+      <button class="btn-secondary" style="margin-top:20px; border:none; cursor:pointer; background:none;" onclick="closeLeadModal()">Продолжить на сайте</button>
     </div>
   </div>
 </div>
@@ -662,6 +660,7 @@
 const CONFIG = {
   region: "Казахстан",
   leadSource: "jimongroup.kz",
+  maxLink: "https://max.ru/u/f9LHodD0cOKnHRZnfCYKMqkxpgnByIZTcAc7JrC-EhSDi47lkK787lvsYjE",
   socials: [
     { label:"TikTok", url:"https://www.tiktok.com/@jimongroup.ai" },
     { label: "Instagram", url: "https://www.instagram.com/jimongroup.gramm" },
@@ -694,36 +693,74 @@ const scriptedDialog = [
   { from:'peng', text:'Это моя работа и моё удовольствие 💙 Присоединяйтесь к команде JimonGramm, и я продолжу работать с вами лично.' }
 ];
 let scriptIndex = 0;
+let realChatStarted = false;
 function nextScriptMsg(){
+  if(realChatStarted) return;
   if(scriptIndex >= scriptedDialog.length){ scriptIndex = 0; return; }
   const msg = scriptedDialog[scriptIndex++];
-  if(msg.from === 'peng'){ showTyping(); setTimeout(()=>{ removeTyping(); addMsg('peng', msg.text); setTimeout(nextScriptMsg, 3500); }, 1800); }
+  if(msg.from === 'peng'){ showTyping(); setTimeout(()=>{ if(realChatStarted) return; removeTyping(); addMsg('peng', msg.text); setTimeout(nextScriptMsg, 3500); }, 1800); }
   else { addMsg('user', msg.text); setTimeout(nextScriptMsg, 1400); }
 }
-setTimeout(nextScriptMsg, 1400);
+if (localStorage.getItem('peng_landing_limit_date') !== new Date().toISOString().slice(0,10)) { setTimeout(nextScriptMsg, 1400); }
 
 /* ===== РЕАЛЬНЫЙ ВВОД ПОСЕТИТЕЛЯ В ЧАТЕ ===== */
-let pengFreeQuestionsLeft = 3;
+const LANDING_LIMIT_KEY = 'peng_landing_limit_date';
+function isLandingPengLimited(){
+  return localStorage.getItem(LANDING_LIMIT_KEY) === new Date().toISOString().slice(0,10);
+}
+function showLandingLimitReached(){
+  const badge = document.getElementById('pengLimitBadge');
+  if(badge) badge.textContent = 'Лимит на сегодня исчерпан';
+  document.querySelector('.chat-input-row').style.display = 'none';
+  const waText = encodeURIComponent('Здравствуйте! Хочу узнать больше про JIMON GROUP и стать партнёром.');
+  addMsg('peng', `Вы использовали 10 бесплатных вопросов на сегодня 🌿 Дальше лучше написать напрямую — отвечу быстрее в мессенджере:<br><br><a href="https://wa.me/77085080130?text=${waText}" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; margin:6px 6px 0 0; padding:10px 18px; font-size:0.85rem;">📱 WhatsApp</a><a href="${CONFIG.maxLink}" target="_blank" class="btn-secondary" style="text-decoration:none; display:inline-block; margin:6px 0 0; padding:10px 18px; font-size:0.85rem; border:none;">💬 MAX</a>`);
+}
 function sendToPeng(){
   const input = document.getElementById('pengRealInput');
   const text = input.value.trim();
   if(!text) return;
+  if(isLandingPengLimited()){
+    if(!realChatStarted){ realChatStarted = true; chat.innerHTML = ''; }
+    showLandingLimitReached();
+    input.value = '';
+    return;
+  }
+  if(!realChatStarted){
+    realChatStarted = true;
+    chat.innerHTML = '';
+  }
   addMsg('user', text);
   input.value = '';
+  input.disabled = true;
   const badge = document.getElementById('pengLimitBadge');
-  if(pengFreeQuestionsLeft > 0){
-    pengFreeQuestionsLeft--;
-    if(badge) badge.textContent = 'Бесплатных вопросов: ' + pengFreeQuestionsLeft;
-    showTyping();
-    setTimeout(()=>{
-      removeTyping();
-      addMsg('peng', 'Спасибо за вопрос 🌿 Чтобы получить полный персональный разбор от Пэн — оставьте заявку, и куратор подключит вас в приложении JimonGramm.');
-    }, 1600);
-  } else {
-    addMsg('peng', 'Бесплатные вопросы закончились 🙏 Оставьте заявку — куратор откроет вам полный доступ к Пэн.');
-    openLeadModal('Чат с Пэн');
-  }
+  showTyping();
+  fetch('https://jimongramm.com/api/landing-peng', {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({ message: text })
+  }).then(r => r.json()).then(data => {
+    removeTyping();
+    if(data.limitReached){
+      localStorage.setItem(LANDING_LIMIT_KEY, new Date().toISOString().slice(0,10));
+      showLandingLimitReached();
+    } else {
+      let replyText = data.reply || 'Извините, не получилось ответить.';
+      let action = null;
+      if (replyText.includes('[CATALOG]')) { action = 'catalog'; replyText = replyText.replace('[CATALOG]', '').trim(); }
+      else if (replyText.includes('[PARTNER]')) { action = 'partner'; replyText = replyText.replace('[PARTNER]', '').trim(); }
+      addMsg('peng', replyText);
+      if (action === 'catalog') {
+        addMsg('peng', '<a href="/catalog.html" class="btn-primary" style="text-decoration:none; display:inline-block; margin-top:6px; padding:10px 18px; font-size:0.85rem;">📖 Смотреть каталог</a>');
+      } else if (action === 'partner') {
+        addMsg('peng', '<a href="#" onclick="openLeadModal(\'Чат с Пэн\'); return false;" class="btn-primary" style="text-decoration:none; display:inline-block; margin-top:6px; padding:10px 18px; font-size:0.85rem;">✦ Стать партнёром</a>');
+      }
+      if(badge) badge.textContent = 'Бесплатных вопросов: ' + (data.remaining ?? '—');
+    }
+  }).catch(() => {
+    removeTyping();
+    addMsg('peng', 'Извините, произошла ошибка соединения. Попробуйте ещё раз.');
+  }).finally(() => { input.disabled = false; input.focus(); });
 }
+if (isLandingPengLimited()) { showLandingLimitReached(); }
 
 function toggleFaq(el){
   const item=el.parentElement; const isOpen=item.classList.contains('open');
@@ -766,17 +803,13 @@ function checkCustomCity(){
   const city = document.getElementById('m-city').value;
   document.getElementById('m-city-custom').style.display = (city === 'Другой город') ? 'block' : 'none';
 }
-function checkCustomMethod(){
-  const method = document.getElementById('m-method').value;
-  document.getElementById('m-method-custom').style.display = (method === 'Другой') ? 'block' : 'none';
-}
 let leadButtonSource = 'Не указан';
 let openedViaModalParam = false;
 function openLeadModal(buttonLabel){
   leadButtonSource = buttonLabel || 'Не указан';
   document.getElementById('leadModal').classList.add('open');
   document.getElementById('modalFormView').style.display = 'block';
-  document.getElementById('modalSuccessView').style.display = 'none';
+  document.getElementById('modalMessengerView').style.display = 'none';
 }
 let catalogInterestLabel = '';
 window.addEventListener('load', function(){
@@ -812,25 +845,29 @@ async function submitLead(){
   if(city === 'Другой город') city = document.getElementById('m-city-custom').value.trim() || city;
 
   const name = document.getElementById('m-name').value.trim();
+  const surname = document.getElementById('m-surname').value.trim();
+  const fullName = (name + ' ' + surname).trim();
   const phoneCode = document.getElementById('m-phone-code').value.replace('kz','');
   const phone = document.getElementById('m-phone').value.trim();
   const contact = phoneCode + ' ' + phone;
 
-  let method = document.getElementById('m-method').value;
-  if(method === 'Другой') method = document.getElementById('m-method-custom').value.trim() || method;
-
-  if(!country || !city || !name || !phone){ alert('Пожалуйста, заполните все поля.'); return; }
+  if(!country || !city || !name || !surname || !phone){ alert('Пожалуйста, заполните все поля.'); return; }
   const btn = document.querySelector('#modalFormView .form-submit');
-  btn.textContent = 'Отправляем...'; btn.disabled = true;
+  btn.textContent = 'Секунду...'; btn.disabled = true;
   try{
-    await fetch('https://jimongramm.com/api/landing-lead',{
+    fetch('https://jimongramm.com/api/landing-lead',{
       method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ name, city, contact, contactMethod:method, country, source: CONFIG.leadSource + ' — ' + (interestLabel || leadButtonSource) })
-    });
+      body: JSON.stringify({ name: fullName, city, contact, contactMethod:'—', country, source: CONFIG.leadSource + ' — ' + (interestLabel || leadButtonSource) })
+    }).catch(()=>{});
   }catch(e){}
+
+  const waText = encodeURIComponent(`Здравствуйте! Меня зовут ${fullName}, ${city}, ${country}. Хочу стать партнёром JIMON GROUP.`);
+  document.getElementById('m-whatsapp-link').href = `https://wa.me/77085080130?text=${waText}`;
+  document.getElementById('m-max-link').href = CONFIG.maxLink;
+
   document.getElementById('modalFormView').style.display = 'none';
-  document.getElementById('modalSuccessView').style.display = 'block';
-  btn.textContent = 'Отправить заявку →'; btn.disabled = false;
+  document.getElementById('modalMessengerView').style.display = 'block';
+  btn.textContent = 'Продолжить →'; btn.disabled = false;
 }
 function toggleContactMenu(){
   document.getElementById('contactMenu').classList.toggle('open');
