@@ -454,7 +454,7 @@
           <input type="text" id="pengRealInput" class="chat-input-fake" placeholder="Сізді не мазалайды, айтыңыз..." style="border:none; outline:none; font-family:inherit;" onkeypress="if(event.key==='Enter') sendToPeng()">
           <button class="chat-send-btn" onclick="sendToPeng()">→</button>
         </div>
-        <div id="pengLimitBadge" style="text-align:center; font-size:0.75rem; color:rgba(250,246,236,0.4); margin-top:8px;">Тегін сұрақтар: 3</div>
+        <div id="pengLimitBadge" style="text-align:center; font-size:0.75rem; color:rgba(250,246,236,0.4); margin-top:8px;">Тегін сұрақтар: 10</div>
       </div>
     </div>
 
@@ -576,9 +576,13 @@
           </select>
           <input class="form-input modal-input" id="m-city-custom" placeholder="Қаланы көрсетіңіз" style="display:none; margin-top:8px;">
         </div>
-        <div class="form-field full">
-          <label class="form-label modal-label">Аты-жөні</label>
+        <div class="form-field">
+          <label class="form-label modal-label">Аты</label>
           <input class="form-input modal-input" id="m-name" placeholder="Сіздің атыңыз">
+        </div>
+        <div class="form-field">
+          <label class="form-label modal-label">Тегі</label>
+          <input class="form-input modal-input" id="m-surname" placeholder="Сіздің тегіңіз">
         </div>
         <div class="form-field">
           <label class="form-label modal-label">Ел коды</label>
@@ -602,27 +606,21 @@
           <label class="form-label modal-label">Телефон нөмірі</label>
           <input class="form-input modal-input" id="m-phone" placeholder="700 123 45 67">
         </div>
-        <div class="form-field full">
-          <label class="form-label modal-label">Байланыс тәсілі</label>
-          <select class="form-input modal-input" id="m-method" onchange="checkCustomMethod()">
-            <option value="WhatsApp">WhatsApp</option>
-            <option value="Telegram">Telegram</option>
-            <option value="Max">Max</option>
-            <option value="Другой">Басқа тәсіл</option>
-          </select>
-          <input class="form-input modal-input" id="m-method-custom" placeholder="Байланыс тәсілін көрсетіңіз" style="display:none; margin-top:8px;">
-        </div>
       </div>
-      <button class="form-submit" onclick="submitLead()">Өтінімді жіберу →</button>
+      <button class="form-submit" onclick="submitLead()">Жалғастыру →</button>
       <div class="form-note modal-note">Деректер қорғалған және үшінші тұлғаларға берілмейді.</div>
     </div>
 
-    <div id="modalSuccessView" style="display:none; text-align:center;">
+    <div id="modalMessengerView" style="display:none; text-align:center;">
       <div class="form-success-icon">🎉</div>
-      <div class="form-success-title">Құттықтаймыз — өтінім қабылданды!</div>
-      <p class="modal-success-text">Аймағыңыздың ресми менеджері жақын арада сізбен байланысады.</p>
-      <p class="modal-success-wish">Сізге мықты денсаулық және JIMON GROUP командасында сәтті бастама тілейміз 🌿</p>
-      <button class="btn-secondary" style="margin-top:20px; border:none; cursor:pointer;" onclick="closeLeadModal()">Сайтта жалғастыру</button>
+      <div class="form-success-title">Керемет, бізге жазу ғана қалды!</div>
+      <p class="modal-success-text">Біз команда басшысымен тікелей жұмыс істейміз — нөмірдің ерекшелігіне байланысты ол бірінші жаза алмайды. Төмендегі батырманы басыңыз, мессенджер дайын хабарламамен ашылады — жай ғана жіберіңіз 😊</p>
+      <div class="messenger-btns" style="display:flex; flex-direction:column; gap:12px; margin-top:20px;">
+        <a id="m-whatsapp-link" href="#" target="_blank" class="btn-primary" style="text-decoration:none; display:block;">📱 WhatsApp-қа жазу</a>
+        <a id="m-max-link" href="#" target="_blank" class="btn-secondary" style="text-decoration:none; display:block; border:none; cursor:pointer;">💬 MAX-қа жазу</a>
+      </div>
+      <p class="modal-success-wish" style="margin-top:16px;">Сізге мықты денсаулық және JIMON GROUP командасында сәтті бастама тілейміз 🌿</p>
+      <button class="btn-secondary" style="margin-top:20px; border:none; cursor:pointer; background:none;" onclick="closeLeadModal()">Сайтта жалғастыру</button>
     </div>
   </div>
 </div>
@@ -647,6 +645,7 @@
 const CONFIG = {
   region: "Қазақстан",
   leadSource: "jimongroup.kz/kz",
+  maxLink: "https://max.ru/u/f9LHodD0cOKnHRZnfCYKMqkxpgnByIZTcAc7JrC-EhSDi47lkK787lvsYjE",
   socials: [
     { label:"TikTok", url:"https://www.tiktok.com/@jimongroup.ai" },
     { label: "Instagram", url: "https://www.instagram.com/jimongroup.gramm" },
@@ -679,36 +678,74 @@ const scriptedDialog = [
   { from:'peng', text:'Бұл менің жұмысым да, қуанышым да 💙 JimonGramm командасына қосылыңыз — мен сізбен жеке жұмысты қуана жалғастырамын.' }
 ];
 let scriptIndex = 0;
+let realChatStarted = false;
 function nextScriptMsg(){
+  if(realChatStarted) return;
   if(scriptIndex >= scriptedDialog.length){ scriptIndex = 0; return; }
   const msg = scriptedDialog[scriptIndex++];
-  if(msg.from === 'peng'){ showTyping(); setTimeout(()=>{ removeTyping(); addMsg('peng', msg.text); setTimeout(nextScriptMsg, 3500); }, 1800); }
+  if(msg.from === 'peng'){ showTyping(); setTimeout(()=>{ if(realChatStarted) return; removeTyping(); addMsg('peng', msg.text); setTimeout(nextScriptMsg, 3500); }, 1800); }
   else { addMsg('user', msg.text); setTimeout(nextScriptMsg, 1400); }
 }
-setTimeout(nextScriptMsg, 1400);
+if (localStorage.getItem('peng_landing_limit_date') !== new Date().toISOString().slice(0,10)) { setTimeout(nextScriptMsg, 1400); }
 
 /* ===== РЕАЛЬНЫЙ ВВОД ПОСЕТИТЕЛЯ В ЧАТЕ ===== */
-let pengFreeQuestionsLeft = 3;
+const LANDING_LIMIT_KEY = 'peng_landing_limit_date';
+function isLandingPengLimited(){
+  return localStorage.getItem(LANDING_LIMIT_KEY) === new Date().toISOString().slice(0,10);
+}
+function showLandingLimitReached(){
+  const badge = document.getElementById('pengLimitBadge');
+  if(badge) badge.textContent = 'Бүгінге лимит таусылды';
+  document.querySelector('.chat-input-row').style.display = 'none';
+  const waText = encodeURIComponent('Сәлеметсіз бе! JIMON GROUP туралы көбірек білгім келеді және серіктес болғым келеді.');
+  addMsg('peng', `Сіз бүгін 10 тегін сұрақты пайдаландыңыз 🌿 Одан әрі тікелей жазған дұрыс — мессенджерде жылдамырақ жауап беремін:<br><br><a href="https://wa.me/77085080130?text=${waText}" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; margin:6px 6px 0 0; padding:10px 18px; font-size:0.85rem;">📱 WhatsApp</a><a href="${CONFIG.maxLink}" target="_blank" class="btn-secondary" style="text-decoration:none; display:inline-block; margin:6px 0 0; padding:10px 18px; font-size:0.85rem; border:none;">💬 MAX</a>`);
+}
 function sendToPeng(){
   const input = document.getElementById('pengRealInput');
   const text = input.value.trim();
   if(!text) return;
+  if(isLandingPengLimited()){
+    if(!realChatStarted){ realChatStarted = true; chat.innerHTML = ''; }
+    showLandingLimitReached();
+    input.value = '';
+    return;
+  }
+  if(!realChatStarted){
+    realChatStarted = true;
+    chat.innerHTML = '';
+  }
   addMsg('user', text);
   input.value = '';
+  input.disabled = true;
   const badge = document.getElementById('pengLimitBadge');
-  if(pengFreeQuestionsLeft > 0){
-    pengFreeQuestionsLeft--;
-    if(badge) badge.textContent = 'Тегін сұрақтар: ' + pengFreeQuestionsLeft;
-    showTyping();
-    setTimeout(()=>{
-      removeTyping();
-      addMsg('peng', 'Сұрағыңыз үшін рахмет 🌿 Пэннен толық жеке талдау алу үшін өтінім қалдырыңыз, куратор сізді JimonGramm қосымшасына қосады.');
-    }, 1600);
-  } else {
-    addMsg('peng', 'Тегін сұрақтар таусылды 🙏 Өтінім қалдырыңыз — куратор сізге Пэнге толық қолжетімділік ашады.');
-    openLeadModal('Чат с Пэн');
-  }
+  showTyping();
+  fetch('https://jimongramm.com/api/landing-peng', {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({ message: text })
+  }).then(r => r.json()).then(data => {
+    removeTyping();
+    if(data.limitReached){
+      localStorage.setItem(LANDING_LIMIT_KEY, new Date().toISOString().slice(0,10));
+      showLandingLimitReached();
+    } else {
+      let replyText = data.reply || 'Кешіріңіз, жауап бере алмадым.';
+      let action = null;
+      if (replyText.includes('[CATALOG]')) { action = 'catalog'; replyText = replyText.replace('[CATALOG]', '').trim(); }
+      else if (replyText.includes('[PARTNER]')) { action = 'partner'; replyText = replyText.replace('[PARTNER]', '').trim(); }
+      addMsg('peng', replyText);
+      if (action === 'catalog') {
+        addMsg('peng', '<a href="/kz/catalog.html" class="btn-primary" style="text-decoration:none; display:inline-block; margin-top:6px; padding:10px 18px; font-size:0.85rem;">📖 Каталогты қарау</a>');
+      } else if (action === 'partner') {
+        addMsg('peng', '<a href="#" onclick="openLeadModal(\'Чат с Пэн\'); return false;" class="btn-primary" style="text-decoration:none; display:inline-block; margin-top:6px; padding:10px 18px; font-size:0.85rem;">✦ Серіктес болу</a>');
+      }
+      if(badge) badge.textContent = 'Тегін сұрақтар: ' + (data.remaining ?? '—');
+    }
+  }).catch(() => {
+    removeTyping();
+    addMsg('peng', 'Кешіріңіз, байланыс қатесі орын алды. Қайталап көріңіз.');
+  }).finally(() => { input.disabled = false; input.focus(); });
 }
+if (isLandingPengLimited()) { showLandingLimitReached(); }
 
 function toggleFaq(el){
   const item=el.parentElement; const isOpen=item.classList.contains('open');
@@ -751,17 +788,13 @@ function checkCustomCity(){
   const city = document.getElementById('m-city').value;
   document.getElementById('m-city-custom').style.display = (city === 'Басқа қала') ? 'block' : 'none';
 }
-function checkCustomMethod(){
-  const method = document.getElementById('m-method').value;
-  document.getElementById('m-method-custom').style.display = (method === 'Другой') ? 'block' : 'none';
-}
 let leadButtonSource = 'Көрсетілмеген';
   let openedViaModalParam = false;
 function openLeadModal(buttonLabel){
   leadButtonSource = buttonLabel || 'Көрсетілмеген';
   document.getElementById('leadModal').classList.add('open');
   document.getElementById('modalFormView').style.display = 'block';
-  document.getElementById('modalSuccessView').style.display = 'none';
+  document.getElementById('modalMessengerView').style.display = 'none';
 }
 let catalogInterestLabel = '';
 const urlInterestParam = new URLSearchParams(window.location.search).get('interest');
@@ -793,25 +826,29 @@ async function submitLead(){
   if(city === 'Басқа қала') city = document.getElementById('m-city-custom').value.trim() || city;
 
   const name = document.getElementById('m-name').value.trim();
+  const surname = document.getElementById('m-surname').value.trim();
+  const fullName = (name + ' ' + surname).trim();
   const phoneCode = document.getElementById('m-phone-code').value.replace('kz','');
   const phone = document.getElementById('m-phone').value.trim();
   const contact = phoneCode + ' ' + phone;
 
-  let method = document.getElementById('m-method').value;
-  if(method === 'Другой') method = document.getElementById('m-method-custom').value.trim() || method;
-
-  if(!country || !city || !name || !phone){ alert('Барлық өрістерді толтырыңыз.'); return; }
+  if(!country || !city || !name || !surname || !phone){ alert('Барлық өрістерді толтырыңыз.'); return; }
   const btn = document.querySelector('#modalFormView .form-submit');
-  btn.textContent = 'Жіберіліп жатыр...'; btn.disabled = true;
+  btn.textContent = 'Бір сәт...'; btn.disabled = true;
   try{
-    await fetch('https://jimongramm.com/api/landing-lead',{
+    fetch('https://jimongramm.com/api/landing-lead',{
       method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ name, city, contact, contactMethod:method, country, source: CONFIG.leadSource + ' — ' + (interestLabel || leadButtonSource) })
-    });
+      body: JSON.stringify({ name: fullName, city, contact, contactMethod:'—', country, source: CONFIG.leadSource + ' — ' + (interestLabel || leadButtonSource) })
+    }).catch(()=>{});
   }catch(e){}
+
+  const waText = encodeURIComponent(`Сәлеметсіз бе! Менің атым ${fullName}, ${city}, ${country}. JIMON GROUP серіктесі болғым келеді.`);
+  document.getElementById('m-whatsapp-link').href = `https://wa.me/77085080130?text=${waText}`;
+  document.getElementById('m-max-link').href = CONFIG.maxLink;
+
   document.getElementById('modalFormView').style.display = 'none';
-  document.getElementById('modalSuccessView').style.display = 'block';
-  btn.textContent = 'Өтінімді жіберу →'; btn.disabled = false;
+  document.getElementById('modalMessengerView').style.display = 'block';
+  btn.textContent = 'Жалғастыру →'; btn.disabled = false;
 }
 function toggleContactMenu(){
   document.getElementById('contactMenu').classList.toggle('open');
