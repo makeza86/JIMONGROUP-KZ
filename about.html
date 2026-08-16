@@ -146,101 +146,10 @@
   <div class="cta-block">
     <h2>Хотите стать частью этой истории?</h2>
     <p style="color:rgba(250,246,236,0.7); margin-bottom:20px;">Куратор подробно расскажет, как начать путь с JIMON GROUP в вашем регионе.</p>
-   <button type="button" class="btn-primary" onclick="openJimonReg()">Стать партнёром →</button>
+   <a href="/index.html?openModal=1" class="btn-primary">Стать партнёром →</a>
   </div>
 </div>
 
 <footer>© 2026 JIMON GROUP · <a href="/index.html" style="color:var(--green);">jimongroup.kz</a><br><a href="/about.html" style="color:var(--green);">О компании</a> · <a href="/catalog.html" style="color:var(--green);">Каталог</a> · <a href="/marketing-plan.html" style="color:var(--green);">Маркетинг-план</a> · <a href="/documentation.html" style="color:var(--green);">Документация</a> · <a href="/privacy.html" style="color:var(--green);">Конфиденциальность</a></footer>
-<!-- МОДАЛКА РЕГИСТРАЦИИ JIMON GROUP -->
-<div id="jimonRegOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:1000;align-items:center;justify-content:center;">
-  <div style="background:#fff;border-radius:20px;padding:32px;max-width:400px;width:90%;position:relative;">
-    <button onclick="closeJimonReg()" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#888;">✕</button>
-    <div id="jrStep1">
-      <h3 style="margin:0 0 8px;color:#1f4d3a;font-size:20px;">✦ Стать партнёром JIMON GROUP</h3>
-      <p style="color:#666;font-size:14px;margin:0 0 20px;">Введите номер телефона — придёт SMS с кодом подтверждения</p>
-      <select id="jrAreaCode" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;margin-bottom:10px;font-size:15px;">
-        <option value="7">🇰🇿 +7 Казахстан / Россия</option>
-        <option value="998">🇺🇿 +998 Узбекистан</option>
-        <option value="996">🇰🇬 +996 Кыргызстан</option>
-        <option value="992">🇹🇯 +992 Таджикистан</option>
-      </select>
-      <input id="jrPhone" type="tel" placeholder="Номер телефона" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;margin-bottom:10px;font-size:15px;box-sizing:border-box;">
-      <input id="jrName" type="text" placeholder="Ваше имя (необязательно)" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;margin-bottom:16px;font-size:15px;box-sizing:border-box;">
-      <p id="jrErr1" style="color:red;font-size:13px;margin:0 0 10px;display:none;"></p>
-      <button onclick="jrSendSms()" style="width:100%;padding:14px;background:#1f4d3a;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;">Получить SMS-код</button>
-    </div>
-    <div id="jrStep2" style="display:none;">
-      <h3 style="margin:0 0 8px;color:#1f4d3a;font-size:20px;">📱 Введите код из SMS</h3>
-      <p id="jrPhoneHint" style="color:#666;font-size:14px;margin:0 0 20px;"></p>
-      <input id="jrCode" type="text" placeholder="Код из SMS" maxlength="6" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;margin-bottom:16px;font-size:20px;text-align:center;letter-spacing:6px;box-sizing:border-box;">
-      <p id="jrErr2" style="color:red;font-size:13px;margin:0 0 10px;display:none;"></p>
-      <button onclick="jrRegister()" style="width:100%;padding:14px;background:#1f4d3a;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;">Подтвердить и зарегистрироваться</button>
-      <button onclick="document.getElementById('jrStep1').style.display='block';document.getElementById('jrStep2').style.display='none';" style="width:100%;padding:10px;background:none;border:none;color:#888;font-size:13px;cursor:pointer;margin-top:8px;">← Изменить номер</button>
-    </div>
-    <div id="jrStep3" style="display:none;text-align:center;">
-      <div style="font-size:48px;margin-bottom:12px;">🎉</div>
-      <h3 style="color:#1f4d3a;margin:0 0 12px;">Добро пожаловать в JIMON GROUP!</h3>
-      <p style="color:#444;font-size:15px;line-height:1.6;margin:0 0 16px;">Вы официально в команде. Личный куратор свяжется с вами в ближайшее время и расскажет следующие шаги.</p>
-      <p style="color:#c9a84c;font-size:14px;font-weight:600;margin:0 0 20px;">Технология JimonGramm уже работает на вас 24/7 — пока вы живёте жизнью.</p>
-      <button onclick="closeJimonReg()" style="padding:12px 32px;background:#c9a84c;color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;">Отлично!</button>
-    </div>
-  </div>
-</div>
-<script>
-let jrLabel = 'Стать партнёром';
-function openJimonReg(label){
-  jrLabel = label || 'Стать партнёром';
-  document.getElementById('jimonRegOverlay').style.display='flex';
-  document.getElementById('jrStep1').style.display='block';
-  document.getElementById('jrStep2').style.display='none';
-  document.getElementById('jrStep3').style.display='none';
-  document.querySelector('#jrStep1 h3').textContent = '✦ ' + jrLabel + ' JIMON GROUP';
-}
-function closeJimonReg(){
-  document.getElementById('jimonRegOverlay').style.display='none';
-}
-async function jrSendSms(){
-  const phone = document.getElementById('jrPhone').value.trim().replace(/\D/g,'');
-  const area = document.getElementById('jrAreaCode').value;
-  const err = document.getElementById('jrErr1');
-  if(!phone || phone.length < 7){ err.textContent='Введите номер телефона'; err.style.display='block'; return; }
-  err.style.display='none';
-  const btn = event.target; btn.textContent='Отправляем...'; btn.disabled=true;
-  try{
-    const r = await fetch('https://jimongramm.com/api/jimon-sms',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone,area_code:area})});
-    const d = await r.json();
-    if(d.ok){
-      document.getElementById('jrPhoneHint').textContent='Код отправлен на +'+area+' '+phone;
-      document.getElementById('jrStep1').style.display='none';
-      document.getElementById('jrStep2').style.display='block';
-    } else {
-      const msgRu = {'手机号已存在':'Этот номер уже зарегистрирован','手机号已存在，无法注册':'Этот номер уже зарегистрирован','验证码错误':'Неверный код','发送失败':'Ошибка отправки SMS'};
-      err.textContent = msgRu[d.msg] || d.msg || 'Ошибка отправки SMS'; err.style.display='block';
-    }
-  }catch(e){ err.textContent='Ошибка соединения'; err.style.display='block'; }
-  btn.textContent='Получить SMS-код'; btn.disabled=false;
-}
-async function jrRegister(){
-  const phone = document.getElementById('jrPhone').value.trim().replace(/\D/g,'');
-  const area = document.getElementById('jrAreaCode').value;
-  const code = document.getElementById('jrCode').value.trim();
-  const name = document.getElementById('jrName').value.trim();
-  const err = document.getElementById('jrErr2');
-  if(!code){ err.textContent='Введите код из SMS'; err.style.display='block'; return; }
-  err.style.display='none';
-  const btn = event.target; btn.textContent='Регистрируем...'; btn.disabled=true;
-  try{
-    const r = await fetch('https://jimongramm.com/api/jimon-register',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone,area_code:area,code,country:'1',name,source:'jimongroup.kz/about.html — ' + jrLabel})});
-    const d = await r.json();
-    if(d.ok){
-      document.getElementById('jrStep2').style.display='none';
-      document.getElementById('jrStep3').style.display='block';
-    } else {
-      err.textContent = d.msg || 'Ошибка регистрации'; err.style.display='block';
-    }
-  }catch(e){ err.textContent='Ошибка соединения'; err.style.display='block'; }
-  btn.textContent='Подтвердить и зарегистрироваться'; btn.disabled=false;
-}
-</script>
 </body>
 </html>
