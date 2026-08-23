@@ -10,6 +10,11 @@
 <meta name="description" content="Полный каталог продукции JIMON GROUP: BIRUNKANG, СЮЭ ЛАН ДО, СЯНЬ ЮНЬ Ю, MAYOU, SHANLINENG и другие. Натуральные комплексы на принципах традиционной китайской медицины.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="https://jimongroup.kz/catalog.html">
+<link rel="alternate" hreflang="ru-KZ" href="https://jimongroup.kz/catalog.html" />
+<link rel="alternate" hreflang="kk-KZ" href="https://jimongroup.kz/kz/catalog.html" />
+<link rel="alternate" hreflang="ru-RU" href="https://jimon-group.ru/catalog.html" />
+<link rel="alternate" hreflang="ky-KG" href="https://jimongroup.kg/catalog.html" />
+<link rel="alternate" hreflang="x-default" href="https://jimongroup.kz/catalog.html" />
 
 <script type="application/ld+json">
 {
@@ -61,6 +66,37 @@
   .pcard-ask:hover{background:rgba(212,168,76,0.18);}
   .pcard-desc{display:none; margin-top:10px; padding-top:10px; border-top:1px solid rgba(212,168,76,0.12); font-size:11.5px; color:var(--text2); line-height:1.65;}
   .pcard-desc.open{display:block;}
+  .pcard-price{font-size:15px; font-weight:800; color:var(--gold-light); margin-bottom:8px;}
+  .pcard-price-note{font-size:10px; color:var(--text2); margin-top:2px; font-weight:500;}
+  .discount-banner{background:linear-gradient(135deg,rgba(212,168,76,0.14),rgba(212,168,76,0.05)); border:1px solid rgba(212,168,76,0.3); border-radius:14px; padding:18px 22px; margin-bottom:30px; text-align:center;}
+  .discount-banner b{color:var(--gold-light);}
+
+  /* ===== ПОЛНАЯ ПОСТЕР-КАРТОЧКА (как в PDF-каталоге) ===== */
+  .product-grid.full-cards{grid-template-columns:repeat(auto-fill,minmax(320px,1fr));}
+  .fcard{background:var(--card-bg); border:1px solid var(--border); border-radius:18px; overflow:hidden; display:flex; flex-direction:column;}
+  .fcard-img-wrap{width:100%; aspect-ratio:1/1; background:#0a1810; display:flex; align-items:center; justify-content:center; overflow:hidden;}
+  .fcard-img-wrap img{width:100%; height:100%; object-fit:cover;}
+  .fcard-body{padding:20px 20px 24px;}
+  .fcard-name{font-family:'Noto Serif SC',serif; font-size:1.3rem; color:var(--gold-light); text-align:center; margin-bottom:4px;}
+  .fcard-subtitle{text-align:center; font-size:0.95rem; font-weight:700; color:var(--text); margin-bottom:2px;}
+  .fcard-volume{text-align:center; font-size:0.78rem; color:var(--text2); margin-bottom:14px;}
+  .fcard-desc{font-size:0.82rem; color:var(--text2); line-height:1.6; text-align:center; margin-bottom:16px; padding-bottom:16px; border-bottom:1px solid rgba(212,168,76,0.15);}
+  .fcard-cols{display:grid; grid-template-columns:1fr auto; gap:16px; margin-bottom:16px; align-items:start;}
+  .fcard-ingr-title,.fcard-price-title{font-size:0.8rem; font-weight:700; color:var(--gold-light); margin-bottom:8px;}
+  .fcard-ingr-list{list-style:none; padding:0; margin:0;}
+  .fcard-ingr-list li{font-size:0.76rem; color:var(--text2); line-height:1.55; margin-bottom:5px; padding-left:12px; position:relative;}
+  .fcard-ingr-list li::before{content:'•'; position:absolute; left:0; color:var(--gold);}
+  .fcard-price-box{text-align:center; white-space:nowrap;}
+  .fcard-price-box .price-ru{font-size:1.15rem; font-weight:800; color:var(--gold-light);}
+  .fcard-usage-title{font-size:0.8rem; font-weight:700; color:var(--gold-light); margin:14px 0 6px; padding-top:14px; border-top:1px solid rgba(212,168,76,0.15);}
+  .fcard-usage{font-size:0.78rem; color:var(--text2); line-height:1.6;}
+  .fcard-warning{margin-top:14px; padding:12px 14px; background:rgba(212,168,76,0.06); border:1px solid rgba(212,168,76,0.2); border-radius:10px; font-size:0.7rem; color:var(--text2); line-height:1.55;}
+  .fcard-warning b{color:var(--gold-light);}
+  .fcard-actions{display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:16px;}
+  .fcard-actions .pcard-more{font-size:0.72rem; color:rgba(148,163,184,0.55); text-decoration:underline; text-decoration-color:rgba(148,163,184,0.3); cursor:pointer; background:none; border:none; padding:4px 0;}
+  .fcard-actions .pcard-more:hover{color:var(--gold);}
+  .fcard-actions .pcard-ask{flex-shrink:0; padding:10px 18px; font-size:0.8rem; font-weight:800; color:#1a1200; background:linear-gradient(135deg,#f0c94a,#e0a92f); border:none; border-radius:10px; cursor:pointer; box-shadow:0 2px 8px rgba(224,169,47,0.35);}
+  .fcard-actions .pcard-ask:hover{filter:brightness(1.08);}
 
   h2.section-h{font-family:'Noto Serif SC',serif; color:var(--gold-light); font-size:1.4rem; margin:50px 0 6px; text-align:center;}
   .section-sub-h{text-align:center; color:var(--text2); font-size:0.92rem; margin-bottom:24px;}
@@ -111,303 +147,813 @@
 </div>
 
 <div class="container">
-  <div class="product-grid" id="productGrid">
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/product-1.png" alt="BIRUNKANG (碧润康) · Жевательные таблетки «Лотос и Боярышник»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">BIRUNKANG (碧润康) · Жевательные таблетки «Лотос и Боярышник»</div>
-      <div class="pcard-short">Пищеварение · детокс</div>
-      <div class="pcard-hook">Натуральные жевательные таблетки на основе традиционных китайских трав — листа лотоса, боярышника, пории и семян кассии. 2–3 таблетки в день помогают поддержать пищеварение, лёгкость тела и свежесть. 30 таблеток — курс на 10–15 дней.</div>
-      <div class="pcard-actions">
-      <a href="/birunkang.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="product-1" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Тяжесть после еды, вздутие, жирный блеск на коже, налёт на языке, постоянная усталость — всё это признаки того, что организму нужна мягкая поддержка.</div>
+  <div class="discount-banner">
+    <b>Скидка на повторные покупки:</b> зарегистрируйтесь и купите 1 продукт — получите скидку 10% на все последующие покупки. Купите комплекс — скидка 20%.
+  </div>
+  <div class="product-grid full-cards" id="productGrid">
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-1.jpg" alt="Aura Curu Массажная маска для сияния и упругости" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Aura Curu»</div>
+        <div class="fcard-subtitle">Массажная маска для сияния и упругости</div>
+        <div class="fcard-volume">50 г</div>
+        <div class="fcard-desc">Роскошная массажная маска для сияния и упругости кожи. Глубоко увлажняет, повышает эластичность, дарит естественное сияние и восстанавливает кожу. Натуральные эфирные масла и экстракты работают в синергии — для свежего, ухоженного и молодого вида каждый день.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Эфирное масло камфорного лавра — тонус и очищение</li><li>Экстракт лимона — сияние и освежение</li><li>Эфирное масло розмарина — стимуляция и упругость</li><li>Эфирное масло дамасской розы — питание и восстановление</li><li>Экстракт можжевельника — антиоксидантная защита</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">35 800 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Нанести на очищенную кожу лица. Выполнить лёгкий массаж круговыми движениями до впитывания. Оставить на несколько минут, затем удалить остатки или смыть водой.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Является косметическим средством. Не является лекарственным средством. Хранить в прохладном сухом месте.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-1" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
       </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/product-2.png" alt="СЮЭ ЛАН ДО (雪蓝朵) · «Ангелика Кейске и Натто»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">СЮЭ ЛАН ДО (雪蓝朵) · «Ангелика Кейске и Натто»</div>
-      <div class="pcard-short">Сердце · сосуды</div>
-      <div class="pcard-hook">Таблетки для рассасывания на основе Ангелики Кейске (Аситаба) и Натто, дополненные лумброкиназой, рыльцами кукурузы и растительными экстрактами. 60 таблеток.</div>
-      <div class="pcard-actions">
-     <a href="/xuelanduo.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="product-2" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Сердце работает без остановки 24 часа в сутки. Стресс, малоподвижный образ жизни и возраст постепенно влияют на кровообращение и тонус сосудов.</div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-2.jpg" alt="Aura Curu Очищающий мёд-гель для умывания" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Aura Curu»</div>
+        <div class="fcard-subtitle">Очищающий мёд-гель для умывания</div>
+        <div class="fcard-volume">100 мл × 2 шт</div>
+        <div class="fcard-desc">Нежный очищающий мёд-гель для ежедневного умывания. Мягко удаляет загрязнения, себум и остатки макияжа, не нарушая защитный барьер кожи. Сохраняет увлажнённость, не вызывает чувства стянутости и идеально подходит даже для чувствительной кожи. Для свежего, чистого и ухоженного лица каждое утро и вечер.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Комплекс CalmYang — успокоение и защита</li><li>Ферментированный полисахарид — мягкое очищение</li><li>Трегалоза — удержание влаги</li><li>Гидролизованный овсяный белок — питание и комфорт</li><li>Мягкие аминокислотные компоненты — бережный уход</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Нанести небольшое количество на влажную кожу лица. Лёгкими массажными движениями вспенить. Распределить на 1–2 минуты. Смыть тёплой водой. Использовать утром и вечером.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Является косметическим средством. Не является лекарственным средством.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-2" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
       </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/product-3.png" alt="СЯНЬ ЮНЬ Ю (纤韵悠) · Фруктово-овощные таблетки" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">СЯНЬ ЮНЬ Ю (纤韵悠) · Фруктово-овощные таблетки</div>
-      <div class="pcard-short">Антивисцерал · Вывод</div>
-      <div class="pcard-hook">Фруктово-овощные жевательные таблетки на основе более 10 натуральных экстрактов: клубника, черника, зелёный кофе, белая фасоль, женьшень, кудзу. 30 таблеток в упаковке.</div>
-      <div class="pcard-actions">
-      <a href="/xianyunyu.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="product-3" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Медленный обмен веществ — не приговор, а сигнал организма: ему не хватает нужных нутриентов, пищевых волокон и поддержки кишечника.</div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-3.jpg" alt="Aura Curu Омолаживающий лифтинг-спрей" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Aura Curu»</div>
+        <div class="fcard-subtitle">Омолаживающий лифтинг-спрей</div>
+        <div class="fcard-volume">120 мл</div>
+        <div class="fcard-desc">Мгновенный омолаживающий лифтинг-спрей для лица. Глубоко увлажняет, повышает упругость и эластичность, помогает разгладить мелкие морщины и поддерживает защитный барьер кожи. Лёгкая текстура с мощными пептидами и гиалуроновой кислотой — для свежего, подтянутого и сияющего лица в течение всего дня.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Эктоин — защита и увлажнение</li><li>Экстракт центеллы азиатской — восстановление</li><li>Ацетилтетрапептид-5 — лифтинг-эффект</li><li>Гидролизованный коллаген + 80 видов ГК — упругость</li><li>Комплекс VitaCore — комплексная поддержка</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Распылить на очищенную кожу лица с расстояния 15–20 см. Лёгкими похлопывающими движениями распределить до полного впитывания. Использовать утром, вечером и в течение дня.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Является косметическим средством. Не является лекарственным средством.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-3" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
       </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/product-4.png" alt="MAYOU (马优) · Почечный комплекс «Женьшень и Хуанцзин»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">MAYOU (马优) · Почечный комплекс «Женьшень и Хуанцзин»</div>
-      <div class="pcard-short">Почки · мужское</div>
-      <div class="pcard-hook">Премиальный фитокомплекс с женьшенем, хуанцзином, ягодами годжи и мужскими цветками эвкоммии. Технология мгновенной заморозки −196°C. 20 таблеток.</div>
-      <div class="pcard-actions">
-     <a href="/mayou.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="product-4" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">В восточной медицине почки — источник жизненной энергии Ци, основа выносливости, иммунитета и репродуктивной функции.</div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-4.jpg" alt="Aura Curu Омолаживающее моделирующее масло-эликсир" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Aura Curu»</div>
+        <div class="fcard-subtitle">Омолаживающее моделирующее масло-эликсир</div>
+        <div class="fcard-volume">30 мл</div>
+        <div class="fcard-desc">Роскошное моделирующее масло-эликсир для омоложения кожи. Повышает упругость и эластичность, интенсивно увлажняет и питает, выравнивает тон и улучшает текстуру. Укрепляет защитный барьер кожи. Мощные пептиды, рекомбинантный эластин и растительные экстракты — для заметно подтянутой, сияющей и ухоженной кожи.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Рекомбинантный эластин IFN-ELA1000 — упругость</li><li>Гидролизованный коллаген — восстановление</li><li>Пальмитоил-тетрапептид-4 и трипептид-1 — лифтинг</li><li>Гликозил-рутин — антиоксидантная защита</li><li>Экстракты сандала и мандарина — питание и сияние</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Перед использованием хорошо встряхнуть флакон. Нанести 2–3 капли на очищенную кожу лица и шеи. Распределить лёгкими массажными движениями до полного впитывания. Использовать утром и вечером.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Только для наружного применения. Избегать попадания в глаза. Является косметическим средством. Не является лекарственным средством.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-4" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
       </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/product-5.png" alt="ШАНЬ ЛИ НЭН (膳力能) · Льняной коллагеновый пептидный порошок" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">ШАНЬ ЛИ НЭН (膳力能) · Льняной коллагеновый пептидный порошок</div>
-      <div class="pcard-short">Питание · Молодость</div>
-      <div class="pcard-hook">Многофункциональный синергетический порошковый напиток на основе льняного семени и костного коллагенового пептида. Белая фасоль блокирует усвоение углеводов. Стики 30 г × 10 порций.</div>
-      <div class="pcard-actions">
-      <a href="/shanlineng.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="product-5" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Современный ритм жизни — это еда на бегу. Этот напиток создан для тех, кто хочет питаться осознанно.</div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-5.jpg" alt="Aura Curu Сыворотка для кожи вокруг глаз" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Aura Curu»</div>
+        <div class="fcard-subtitle">Сыворотка для кожи вокруг глаз</div>
+        <div class="fcard-volume">20 г</div>
+        <div class="fcard-desc">Интенсивная сыворотка для нежной кожи вокруг глаз. Смягчает мелкие морщины и «гусиные лапки», уменьшает отёчность, осветляет тон и придаёт сияние. Успокаивает и укрепляет барьер кожи. Керамический аппликатор с охлаждающим эффектом — для свежего, отдохнувшего взгляда каждый день.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Тройной коллаген — упругость и разглаживание</li><li>Успокаивающие растительные компоненты — комфорт кожи</li><li>Без ртути и красителей — чистый состав</li><li>Керамический аппликатор 45° — охлаждение и точность</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">35 800 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Нанести сыворотку точечно аппликатором на кожу вокруг глаз. Мягко массировать от внутреннего уголка к внешнему, затем снизу вверх. Лёгкими похлопываниями помочь средству впитаться. Утром и вечером.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Является косметическим средством. Не является лекарственным средством.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-5" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
       </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/product-6.png" alt="SHANLINENG (膳力能) · Комплекс для суставов и костей" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">SHANLINENG (膳力能) · Комплекс для суставов и костей</div>
-      <div class="pcard-short">Суставной · Коллаген</div>
-      <div class="pcard-hook">Комплексный питательный порошок: коллаген II типа, хондроитин, глюкозамин, гиалуроновая кислота и минералы. Саше 6г × 20 пакетов.</div>
-      <div class="pcard-actions">
-     <a href="/shanlineng-sustav.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="product-6" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Суставы и кости держат нас всю жизнь, но изнашиваются первыми. Комплекс даёт им именно то, из чего они состоят.</div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-6.jpg" alt="CUY RANCHO Антивозрастная серия комплексного ухода за кожей" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«CUY RANCHO»</div>
+        <div class="fcard-subtitle">Антивозрастная серия комплексного ухода за кожей</div>
+        <div class="fcard-volume">6 средств</div>
+        <div class="fcard-desc">Полная антивозрастная система ухода на основе гидролизованного экстракта красного риса премиум-класса. Восстанавливает сияние, повышает упругость, глубоко питает и защищает кожу. Китайская растительная философия + современные активные компоненты — для гармоничной, молодой и ухоженной кожи каждый день.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Гидролизованный экстракт красного риса — сияние и восстановление</li><li>Активные растительные компоненты — питание и защита</li><li>Комплекс из 6 средств — полный ежедневный уход</li><li>Мягкие формулы — для комфорта и результатов</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">165 000 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Использовать средства по порядку: 1. Пенка → 2. Тоник-эмульсия → 3. Сыворотка → 4. Эссенция → 5. Кушон → 6. Крем. Утром и/или вечером.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Является косметическим средством. Не является лекарственным средством.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-6" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
       </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/product-7.png" alt="SHANLINENG (膳力能) · Костный коллагеновый пептидный напиток" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">SHANLINENG (膳力能) · Костный коллагеновый пептидный напиток</div>
-      <div class="pcard-short">Пептидный · Коллаген</div>
-      <div class="pcard-hook">Функциональный порошковый напиток с костным коллагеном. Стики по 10г — размешать в горячей воде. 20 порций в упаковке.</div>
-      <div class="pcard-actions">
-      <a href="/shanlineng-napitok.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="product-7" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">С годами суставы начинают «скрипеть» — это нехватка коллагена, из которого на 30% состоят наши кости, хрящи и связки.</div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-7.jpg" alt="Снежная Орхидея Лифтинг-крем для лица с коллагеном" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Снежная Орхидея»</div>
+        <div class="fcard-subtitle">Лифтинг-крем для лица с коллагеном</div>
+        <div class="fcard-volume">30 г</div>
+        <div class="fcard-desc">Интенсивный лифтинг-крем с коллагеном для заметного омоложения кожи. Улучшает упругость и эластичность, визуально разглаживает мелкие морщины, глубоко питает и увлажняет. Устраняет сухость и тусклость тона. Герметичная вакуумная упаковка сохраняет свежесть и эффективность формулы.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Коллаген — упругость и разглаживание</li><li>Растительные компоненты — питание и комфорт</li><li>Вакуумная система — сохранение свежести</li><li>Ежедневный уход — для лица и шеи</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Наносить на очищенную кожу лица и шеи. Распределить лёгкими массажными движениями до полного впитывания. Подходит для ежедневного использования.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Только для наружного применения. Избегать попадания в глаза. Является косметическим средством.</div>
+        <div class="fcard-actions">
+          <a href="/shanlineng.html" class="pcard-more">подробнее →</a>
+          <button class="pcard-ask" data-key="product-7" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
       </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/product-8.png" alt="YISHAYANMEI (伊莎妍美) · Интимный бактериостатический комплекс" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">YISHAYANMEI (伊莎妍美) · Интимный бактериостатический комплекс</div>
-      <div class="pcard-short">Женское здоровье</div>
-      <div class="pcard-hook">Инновационные фитокапсулы для локального бактериостатического ухода с воробейником, хризантемой и клюквой. Для женщин и мужчин. 10 капсул по 5,5 мл.</div>
-      <div class="pcard-actions">
-     <a href="/yishayanmei.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="product-8" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Деликатная зона — первая линия защиты организма, одна из самых чувствительных к стрессу.</div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-8.jpg" alt="Снежная Орхидея Спрей-мист для ухода и подтяжки лица" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Снежная Орхидея»</div>
+        <div class="fcard-subtitle">Спрей-мист для ухода и подтяжки лица</div>
+        <div class="fcard-volume">120 мл</div>
+        <div class="fcard-desc">Лёгкий спрей-мист для мгновенного увлажнения и подтяжки кожи. Устраняет сухость, восстанавливает упругость, дарит антивозрастной эффект и свежесть. Гиалуроновая кислота, ниацинамид и пептиды работают в синергии — для ухоженного, сияющего лица в течение всего дня. Подходит для всех типов кожи.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Гиалуроновая кислота — глубокое увлажнение</li><li>Ниацинамид — выравнивание тона и барьер</li><li>Пептиды — подтяжка и антивозрастной эффект</li><li>Лёгкая формула — для любого типа кожи</li><li>Удобный спрей — свежесть в любое время</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Распылить на чистую кожу лица, шеи и зоны декольте с расстояния 15–20 см после умывания. Использовать утром, вечером или в течение дня по необходимости.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Только для наружного применения. Избегать попадания в глаза. Является косметическим средством.</div>
+        <div class="fcard-actions">
+          <a href="/sulrancho.html" class="pcard-more">подробнее →</a>
+          <button class="pcard-ask" data-key="product-8" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
       </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/product-9.png" alt="TIANRANCUI (添然萃) · Напиток с дигидрокверцетином" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">TIANRANCUI (添然萃) · Напиток с дигидрокверцетином</div>
-      <div class="pcard-short">Бронхи · Горло</div>
-      <div class="pcard-hook">Растительный напиток на основе дигидрокверцетина, мёда, фруктовых концентратов и трав. Саше 25 мл, 20 штук в упаковке.</div>
-      <div class="pcard-actions">
-      <a href="/tianrancui.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="product-9" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Сухой воздух, пыль, курение, городской смог раздражают горло — этот напиток создан для точечной защиты.</div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-9.jpg" alt="St. Qanon Солнцезащитный крем SPF 50+ PA++++" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«St. Qanon»</div>
+        <div class="fcard-subtitle">Солнцезащитный крем SPF 50+ PA++++</div>
+        <div class="fcard-volume">40 мл</div>
+        <div class="fcard-desc">Надёжная защита от солнца с высоким фактором SPF 50+ PA++++. Эффективно блокирует UVA и UVB-лучи, поддерживает увлажнённость кожи и предотвращает сухость. Лёгкая текстура комфортно распределяется и может использоваться как база под макияж. Для ежедневной защиты и здорового сияния кожи.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Современные UV-фильтры — защита от UVA/UVB</li><li>Гиалуроновая кислота — увлажнение</li><li>Токоферол и витамин C — антиоксиданты</li><li>Растительные экстракты — успокоение и комфорт</li><li>Лёгкая текстура — под макияж и ежедневный уход</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Нанести на очищенную кожу лица за 15–20 минут до выхода на солнце. При длительном пребывании на солнце обновлять каждые 2 часа. Подходит для ежедневного использования.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Является косметическим средством. Не является лекарственным средством. Избегать попадания в глаза.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-9" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
       </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/product-10.png" alt="КЭЛЭШУ (科集桂) · Травяной массажный крем двойного действия" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">КЭЛЭШУ (科集桂) · Травяной массажный крем двойного действия</div>
-      <div class="pcard-short">Суставы · массаж</div>
-      <div class="pcard-hook">Травяной массажный крем на базе восьми видов чистых эфирных масел и экстрактов китайских трав. 100 г, наружное применение.</div>
-      <div class="pcard-actions">
-     <a href="/kelesu.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="product-10" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Облегчение мышечной и суставной боли после долгого сидения, стояния или физических нагрузок.</div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-10.jpg" alt="Бирунканг (Детокс) Прессованные конфеты с листом лотоса и боярышником" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Бирунканг (Детокс)»</div>
+        <div class="fcard-subtitle">Прессованные конфеты с листом лотоса и боярышником</div>
+        <div class="fcard-volume">21 г · 30 таблеток по 0,7 г</div>
+        <div class="fcard-desc">Натуральный продукт на основе листа лотоса и боярышника. Эффективно улучшает пищеварение, помогает контролировать вес, мягко очищает организм и поддерживает здоровый обмен веществ. Богатый растительный состав для ежедневной лёгкости и заботы о здоровье.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Лист лотоса — поддержка обмена веществ и контроль веса</li><li>Боярышник — здоровье сердца и сосудов, улучшение пищеварения</li><li>Семена кассии — мягкое очищение и детокс</li><li>Пория (фулин) и семена коикса — поддержка пищеварения</li><li>Хризантема и улун — тонус и антиоксидантная защита</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">1 раз в день утром, по 2–3 таблетки. Запивать тёплой водой.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не рекомендуется детям, беременным, кормящим и лицам с аллергией. Срок годности 24 месяца. Хранить в сухом проветриваемом месте.</div>
+        <div class="fcard-actions">
+          <a href="/birunkang.html" class="pcard-more">подробнее →</a>
+          <button class="pcard-ask" data-key="product-10" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
       </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/product-11.png" alt="AZEYIHUANG (阿泽益黄) · «Король иммунитета» Цикорий" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">AZEYIHUANG (阿泽益黄) · «Король иммунитета» Цикорий</div>
-      <div class="pcard-short">Иммунитет · цикорий</div>
-      <div class="pcard-hook">Жевательные таблетки на основе цикория. Корень цикория содержит до 70% инулина. 50 таблеток по 0,3 г.</div>
-      <div class="pcard-actions">
-     <a href="/azeyihuang.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="product-11" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Современная наука называет кишечник «вторым мозгом» — 70–80% иммунных клеток организма находятся именно там.</div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-11.jpg" alt="Сянь Юнь Ю (Жиротоп) Прессованные конфеты с фруктово-овощным порошком" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Сянь Юнь Ю (Жиротоп)»</div>
+        <div class="fcard-subtitle">Прессованные конфеты с фруктово-овощным порошком</div>
+        <div class="fcard-volume">30 г · 30 таблеток по 1 г</div>
+        <div class="fcard-desc">Натуральный продукт на основе фруктово-овощных порошков, женьшеня и суперфудов. Помогает контролировать вес, регулирует жировой и углеводный обмен, снижает тягу к перееданию и продлевает чувство сытости. Дарит лёгкость и энергию каждый день. Богатый растительный состав без лишнего сахара — для стройности, тонуса и ежедневной заботы о себе.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Порошок черники и клубники — антиоксиданты и вкус</li><li>Порошок женьшеня — энергия и тонус</li><li>Инулин и овсяный β-глюкан — поддержка пищеварения и сытость</li><li>Порошок белой фасоли и семян кассии — контроль аппетита и детокс</li><li>Зелёный кофе и пуэрария — ускорение метаболизма</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">1–2 таблетки в день после еды. Разжёвывать.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не рекомендуется детям до 14 лет, беременным, кормящим и лицам с аллергией. Срок годности 24 месяца. Хранить в прохладном сухом месте.</div>
+        <div class="fcard-actions">
+          <a href="/xianyunyu.html" class="pcard-more">подробнее →</a>
+          <button class="pcard-ask" data-key="product-11" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
       </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/product-12.png" alt="Тун Юань Бао Цин (同源葆青) · «Создатель стволовых клеток»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">Тун Юань Бао Цин (同源葆青) · «Создатель стволовых клеток»</div>
-      <div class="pcard-short">Омоложение клеток</div>
-      <div class="pcard-hook">Инновационный комплекс на основе пептида бычьего костного мозга. 90 таблеток по 0,9 г — трёхмесячный курс клеточной поддержки.</div>
-      <div class="pcard-actions">
-     <a href="/tunyuanbaoqing.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="product-12" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Костный мозг — «фабрика жизни» внутри тела, именно здесь рождаются стволовые клетки.</div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-12.jpg" alt="Сюэланьдо (Кровочистка) Прессованные конфеты с ашитабой и натто" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Сюэланьдо (Кровочистка)»</div>
+        <div class="fcard-subtitle">Прессованные конфеты с ашитабой и натто</div>
+        <div class="fcard-volume">42 г · 60 таблеток по 0,7 г</div>
+        <div class="fcard-desc">Натуральный продукт на основе ашитабы и натто. Стабилизирует давление и нормализует сахар в крови. Поддерживает здоровое кровообращение, очищает сосуды, помогает нормализовать обмен веществ и повышает общий тонус организма. Богатый растительный состав для ежедневной заботы о здоровье.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Ашитаба — мощный антиоксидант, поддержка метаболизма</li><li>Порошок натто — наттокиназа для сосудов и кровообращения</li><li>Инулин — пребиотик для микрофлоры кишечника</li><li>Порошок кукурузных рылец и семян кассии — детокс и баланс</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">43 575 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Утром и вечером по 1 разу, по 1–2 таблетки. Запивать тёплой водой.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не рекомендуется детям, беременным, кормящим и лицам с аллергией. Срок годности 24 месяца. Хранить в сухом проветриваемом месте.</div>
+        <div class="fcard-actions">
+          <a href="/xuelanduo.html" class="pcard-more">подробнее →</a>
+          <button class="pcard-ask" data-key="product-12" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
       </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/product-13.png" alt="ЮАНЬЮНЬ (媛韵牌) · Антибактериальный глазной стик «Кушень»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">ЮАНЬЮНЬ (媛韵牌) · Антибактериальный глазной стик «Кушень»</div>
-      <div class="pcard-short">Глаза · усталость</div>
-      <div class="pcard-hook">Компактный золотой стик с растительным бактериостатическим раствором на основе корня софоры и ментола. 10 мл.</div>
-      <div class="pcard-actions">
-      <a href="/yuanyun.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="product-13" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Глаза первыми устают в мире экранов — стик возвращает комфорт без капель и без спешки в аптеку.</div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-13.jpg" alt="Льняная коллагеновая каша (Шаньлинэн) 2 коробки" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Льняная коллагеновая каша (Шаньлинэн)»</div>
+        <div class="fcard-subtitle">2 коробки</div>
+        <div class="fcard-volume">300 г · 30 саше по 30 г</div>
+        <div class="fcard-desc">Натуральный продукт на основе семян льна и коллагеновых пептидов. Поддерживает упругость и эластичность кожи, укрепляет волосы и ногти, поддерживает пищеварение и работу кишечника, способствует нормализации обмена веществ, помогает поддерживать чувство сытости. Источник растительного белка и клетчатки — для красоты, лёгкости и ежедневной заботы о здоровье.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Порошок семян льна — омега-3 и пищевые волокна</li><li>Коллагеновые пептиды — поддержка кожи, волос и ногтей</li><li>Овсяная мука и гречиха — энергия и сытость</li><li>Пория и белая фасоль — мягкое очищение</li><li>Витамин E — антиоксидантная защита</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">36 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">1 пакетик растворить в 150 мл тёплой воды. Тщательно размешать и пить.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Содержит глютен и орехи — с осторожностью при аллергии. Хранить в прохладном месте. Срок годности 18 месяцев.</div>
+        <div class="fcard-actions">
+          <a href="/shanlineng.html" class="pcard-more">подробнее →</a>
+          <button class="pcard-ask" data-key="product-13" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
       </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/product-14.png" alt="SULRANCHO (雪兰草) · Антивозрастной мист «Снежная Орхидея»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">SULRANCHO (雪兰草) · Антивозрастной мист «Снежная Орхидея»</div>
-      <div class="pcard-short">Антивозрастной мист</div>
-      <div class="pcard-hook">Многофункциональный спрей-уход для лица с экстрактом снежной орхидеи, 4 пептидами и фуллереном. 120 мл.</div>
-      <div class="pcard-actions">
-      <a href="/sulrancho.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="product-14" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Разглаживает морщинки, возвращает ровный тон, сужает поры, насыщает влагой — за секунды, дома или в дороге.</div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-14.jpg" alt="Коллагеновые пептиды (Шаньлинэн) " loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Коллагеновые пептиды (Шаньлинэн)»</div>
+        
+        <div class="fcard-volume">200 г · 20 саше по 10 г</div>
+        <div class="fcard-desc">Натуральный продукт на основе высококачественных коллагеновых пептидов. Поддерживает упругость и эластичность кожи, способствует увлажнению кожи изнутри, поддерживает здоровье волос и ногтей. Легко усваивается, приятный вкус — для ежедневной заботы о красоте и молодости.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Коллагеновые пептиды — поддержка кожи, волос и ногтей</li><li>Чистый кокосовый порошок — приятный вкус и питание</li><li>Трегалоза — защита клеток и мягкая сладость</li><li>Кристаллическая фруктоза — естественный источник энергии</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">1 пакетик растворить в 150 мл тёплой или горячей воды. Пить 1 раз в день.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не является лекарством. Хранить в прохладном сухом месте. Срок годности 24 месяца.</div>
+        <div class="fcard-actions">
+          <a href="/shanlineng-napitok.html" class="pcard-more">подробнее →</a>
+          <button class="pcard-ask" data-key="product-14" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-15.jpg" alt="«Питательная основа» для суставов и костей " loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Питательная основа» для суставов и костей</div>
+        
+        <div class="fcard-volume">120 г · 20 саше по 6 г</div>
+        <div class="fcard-desc">Натуральная питательная основа для здоровья суставов и костей. Поддерживает подвижность и комфорт суставов, способствует укреплению костной ткани, помогает снизить ощущение скованности и поддерживает соединительную ткань и хрящ. Для ежедневной лёгкости движений и заботы об опорно-двигательном аппарате.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Растительные компоненты — поддержка суставов</li><li>Укрепление костной ткани</li><li>Снижение ощущения скованности</li><li>Поддержка соединительной ткани и хряща</li><li>Удобный формат саше — ежедневный приём</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Растворить 1 саше в тёплой воде. Принимать 1 раз в день.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не является лекарственным средством. Хранить в прохладном сухом месте.</div>
+        <div class="fcard-actions">
+          <a href="/shanlineng-sustav.html" class="pcard-more">подробнее →</a>
+          <button class="pcard-ask" data-key="product-15" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-16.jpg" alt="Конфеты с женьшенем и хуанцзин " loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Конфеты с женьшенем и хуанцзин»</div>
+        
+        <div class="fcard-volume">12 г · 20 таблеток по 0,6 г</div>
+        <div class="fcard-desc">Удобные прессованные конфеты на основе экстракта женьшеня и хуанцзин. Поддерживают уровень энергии и работоспособность, помогают снизить ощущение усталости и способствуют укреплению иммунитета. Приятный формат — просто рассосите 1–2 таблетки в день для ежедневной бодрости и тонуса.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Экстракт женьшеня — энергия и тонус</li><li>Хуанцзин (Polygonatum) — поддержка иммунитета</li><li>Растительные компоненты — комплексная поддержка</li><li>Снижение ощущения усталости</li><li>Удобный формат таблеток — ежедневный приём</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">43 575 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Принимать по 1–2 таблетки в день, рассасывая во рту.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не является лекарственным средством. Хранить в прохладном сухом месте.</div>
+        <div class="fcard-actions">
+          <a href="/mayou.html" class="pcard-more">подробнее →</a>
+          <button class="pcard-ask" data-key="product-16" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-17.jpg" alt="Гелевые конфеты с маслом семян клёна (Мозговой) " loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Гелевые конфеты с маслом семян клёна (Мозговой)»</div>
+        
+        <div class="fcard-volume">30 г · 60 конфет по 0,5 г</div>
+        <div class="fcard-desc">Мощная поддержка мозга и нервной системы. Богаты нервоновой кислотой из масла семян клёна — ключевым компонентом для ясности мышления, концентрации и защиты нейронов. Помогают сохранять остроту ума, снижают умственную усталость и поддерживают работу нервной системы каждый день. Удобный формат без сахара — для тех, кто ценит ясный ум и продуктивность.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Масло семян клёна — источник нервоновой кислоты</li><li>Нервоновая кислота — защита и питание нейронов</li><li>Поддержка нервной системы и концентрации</li><li>Ясность мышления и снижение умственной усталости</li><li>Удобный безсахарный формат</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Принимать по 1–2 конфеты в день.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не является лекарственным средством. Хранить в прохладном сухом месте.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-17" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-18.jpg" alt="«Напиток с куркумой» для поддержки печени " loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Напиток с куркумой» для поддержки печени</div>
+        
+        <div class="fcard-volume">500 мл · 20 саше по 25 мл</div>
+        <div class="fcard-desc">Натуральный напиток на основе пептида печёночного белка и экстракта корня куркумы. Поддерживает работу печени, способствует естественному очищению организма, помогает снизить ощущение тяжести после еды и поддерживает обмен веществ. Для ежедневной заботы о печени и лёгкости.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Пептид печёночного белка — поддержка печени</li><li>Экстракт корня куркумы — очищение и тонус</li><li>Растительные компоненты — комплексная поддержка</li><li>Снижение тяжести после еды</li><li>Готовый к употреблению формат</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">50 175 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Принимать по 1 саше в день. Напиток готов к употреблению, разбавлять водой не нужно.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не является лекарственным средством. Хранить в прохладном сухом месте.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-18" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-19.jpg" alt="«Растительный напиток» для защиты горла " loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Растительный напиток» для защиты горла</div>
+        
+        <div class="fcard-volume">500 мл · 20 саше по 25 мл</div>
+        <div class="fcard-desc">Натуральный растительный напиток для комфорта горла и голосовых связок. Смягчает ощущение сухости и першения, поддерживает комфорт при повышенной голосовой нагрузке, освежает и оставляет чувство лёгкости. Идеально для ежедневной заботы о голосе и горле.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Растительные компоненты — мягкая защита горла</li><li>Смягчение сухости и першения</li><li>Поддержка комфорта голосовых связок</li><li>Помощь при голосовой нагрузке</li><li>Готовый к употреблению формат</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">50 175 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Принимать по 1 саше в день. Напиток готов к употреблению, разбавлять водой не нужно.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не является лекарственным средством. Хранить в прохладном сухом месте.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-19" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-20.jpg" alt="«Питательный напиток» для красоты кожи " loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Питательный напиток» для красоты кожи</div>
+        
+        <div class="fcard-volume">300 мл · 10 саше по 30 мл</div>
+        <div class="fcard-desc">Натуральный питательный напиток для красоты кожи изнутри. Поддерживает упругость и увлажнённость, способствует ровному тону и естественному сиянию, помогает уменьшить ощущение сухости. Растительные компоненты работают на обновление кожи — для свежего, здорового и сияющего вида каждый день.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Растительные компоненты — питание кожи изнутри</li><li>Поддержка упругости и увлажнённости</li><li>Ровный тон и естественное сияние</li><li>Уменьшение ощущения сухости</li><li>Удобный формат саше — ежедневный приём</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Принимать по 1 саше в день.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не является лекарственным средством. Хранить в прохладном сухом месте.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-20" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-21.jpg" alt="Luoxango Растительный напиток (Плод монаха)" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Luoxango»</div>
+        <div class="fcard-subtitle">Растительный напиток (Плод монаха)</div>
+        <div class="fcard-volume">100 мл · 2 бутылочки по 50 мл</div>
+        <div class="fcard-desc">Натуральный растительный напиток на основе экстракта плода монаха (архата). Мягко поддерживает работу желудка и пищеварения, снимает ощущение тяжести после еды, увлажняет и смягчает сухость в горле. Освежает, дарит лёгкость и комфорт. Готовый к употреблению напиток без необходимости разведения — идеальный ежедневный ритуал заботы о пищеварении и горле.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Экстракт плодов архата (плод монаха) — поддержка пищеварения</li><li>Смягчение сухости в горле</li><li>Снижение ощущения тяжести после еды</li><li>Освежающий эффект и лёгкость</li><li>Готовый к употреблению формат</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">50 175 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Принимать по 1 бутылочке в день. Напиток готов к употреблению, разводить водой не нужно.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не является лекарственным средством. Хранить в прохладном сухом месте.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-21" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-22.jpg" alt="«Напиток с дендробиумом» и женьшенем " loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Напиток с дендробиумом» и женьшенем</div>
+        
+        <div class="fcard-volume">60 г · 30 саше по 2 г</div>
+        <div class="fcard-desc">Натуральный напиток на основе дендробиума и ростков женьшеня. Поддерживает уровень энергии и жизненный тонус, способствует увлажнению организма изнутри, помогает снизить ощущение усталости и поддерживает иммунитет. Для ежедневной бодрости и восстановления сил.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Порошок дендробиума — увлажнение и тонус</li><li>Ростки женьшеня — энергия и жизненные силы</li><li>Растительные компоненты — комплексная поддержка</li><li>Поддержка иммунитета — естественная защита</li><li>Удобный формат саше — ежедневный приём</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Растворить 1 саше в тёплой воде. Принимать 1 раз в день.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не является лекарственным средством. Хранить в прохладном сухом месте.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-22" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-23.jpg" alt="«Фанцин» Прессованные конфеты с цикорием" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Фанцин»</div>
+        <div class="fcard-subtitle">Прессованные конфеты с цикорием</div>
+        <div class="fcard-volume">81 г · 90 таблеток по 0,9 г</div>
+        <div class="fcard-desc">Удобные прессованные конфеты на основе экстракта корня цикория. Поддерживают естественные защитные силы организма, способствуют нормализации обмена веществ и помогают поддерживать уровень энергии. Приятный формат — просто рассосите 1–2 таблетки в день для ежедневной заботы о здоровье.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Экстракт корня цикория — поддержка иммунитета</li><li>Растительные компоненты — комплексная поддержка</li><li>Нормализация обмена веществ — лёгкость</li><li>Удобный формат таблеток — ежедневный приём</li><li>Высокая биодоступность — быстрый эффект</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Принимать по 1–2 таблетки в день, рассасывая во рту.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не является лекарственным средством.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-23" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-24.jpg" alt="«Порошок с цикорием» Для иммунитета" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Порошок с цикорием»</div>
+        <div class="fcard-subtitle">Для иммунитета</div>
+        <div class="fcard-volume">71 г · 80 саше по 0,9 г</div>
+        <div class="fcard-desc">Натуральный порошок на основе экстракта корня цикория и инулина. Поддерживает естественные защитные силы организма, способствует здоровой микрофлоре кишечника, помогает поддерживать уровень энергии. Богатый источник растительной клетчатки — для ежедневной заботы о здоровье изнутри.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Экстракт корня цикория — поддержка иммунитета</li><li>Инулин — пребиотик для микрофлоры</li><li>Растительные компоненты — комплексная поддержка</li><li>Источник клетчатки — комфорт пищеварения</li><li>Удобный формат саше — ежедневный приём</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Растворить 1 саше в тёплой воде. Принимать 1 раз в день.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не является лекарственным средством.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-24" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-25.jpg" alt="«Баоцин» Таблетки с пептидом костного мозга" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Баоцин»</div>
+        <div class="fcard-subtitle">Таблетки с пептидом костного мозга</div>
+        <div class="fcard-volume">81 г · 90 таблеток по 0,9 г</div>
+        <div class="fcard-desc">Инновационные таблетки на основе пептида бычьего костного мозга. Поддерживают костную ткань и суставы, помогают быстрее восстанавливаться после нагрузок и поддерживать высокий уровень энергии. Удобный формат — для ежедневной заботы о здоровье изнутри.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Пептид бычьего костного мозга — поддержка костей и суставов</li><li>Растительные компоненты — комплексная поддержка организма</li><li>Высокая биодоступность — лёгкое усвоение</li><li>Удобный формат таблеток — для ежедневного приёма</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Принимать по 1–2 таблетки в день, запивая тёплой водой.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не является лекарственным средством.</div>
+        <div class="fcard-actions">
+          <a href="/tunyuanbaoqing.html" class="pcard-more">подробнее →</a>
+          <button class="pcard-ask" data-key="product-25" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-26.jpg" alt="«Баоцин» Порошок с пептидом костного мозга" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Баоцин»</div>
+        <div class="fcard-subtitle">Порошок с пептидом костного мозга</div>
+        <div class="fcard-volume">72 г · 80 саше по 0,9 г</div>
+        <div class="fcard-desc">Инновационный продукт на основе пептида бычьего костного мозга, который биологически близок к человеческому. Укрепляет костную ткань и суставы, повышает иммунитет, помогает быстрее восстанавливаться после нагрузок. Забота о здоровье изнутри каждый день.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Порошок бычьего костного мозга — поддержка костей и суставов</li><li>Растительные компоненты — комплексная поддержка организма</li><li>Удобный формат саше — для ежедневного приёма</li><li>Высокая биодоступность — лёгкое усвоение</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Растворить 1 саше в тёплой воде. Принимать 1 раз в день.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не является лекарственным средством.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-26" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-27.jpg" alt="«Иша ЯньМэй» Средство для интимного ухода" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Иша ЯньМэй»</div>
+        <div class="fcard-subtitle">Средство для интимного ухода</div>
+        <div class="fcard-volume">5 мл · 10 флаконов по 0,5 мл</div>
+        <div class="fcard-desc">Нежное растительное средство для ежедневного интимного ухода. Поддерживает естественный баланс микрофлоры, сохраняет ощущение свежести и комфорта, мягко ухаживает за чувствительной кожей. Натуральные экстракты шафрана, лаванды и шалфея — для уверенности и заботы о женском здоровье каждый день.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Экстракт цветов шафрана — свежесть и тонус</li><li>Экстракт лаванды — успокоение и комфорт</li><li>Экстракт шалфея — баланс и защита</li><li>Другие растительные компоненты — мягкий уход</li><li>Подходит для ежедневного применения</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Использовать наружно, согласно инструкции на упаковке. Не применять внутрь. Только для наружного применения.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Только для наружного применения. При беременности и в период кормления применять после консультации со специалистом. Не является лекарственным средством.</div>
+        <div class="fcard-actions">
+          <a href="/yishayanmei.html" class="pcard-more">подробнее →</a>
+          <button class="pcard-ask" data-key="product-27" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-28.jpg" alt="«Yuanyun» Карандаш для глаз" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Yuanyun»</div>
+        <div class="fcard-subtitle">Карандаш для глаз</div>
+        <div class="fcard-volume">10 мл</div>
+        <div class="fcard-desc">Нежное растительное средство для ежедневного ухода за нежной кожей вокруг глаз. Снимает ощущение сухости и напряжения, улучшает микроциркуляцию, помогает уменьшить тёмные круги и отёчность. Натуральные экстракты работают бережно и эффективно — для свежего, отдохнувшего взгляда каждый день.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Экстракт шафрана — сияние и тонус</li><li>Экстракт горького женьшеня — улучшение микроциркуляции</li><li>Экстракт мяты — освежение и снятие напряжения</li><li>Экстракт хризантемы — успокоение и восстановление</li><li>Без гормонов и консервантов</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Наносить на область вокруг закрытых глаз лёгкими массажными движениями. Избегать попадания в глаза. Использовать 3–10 раз в день. Курс — 3 месяца.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Только для наружного применения. Избегать попадания в глаза. Не является лекарственным средством.</div>
+        <div class="fcard-actions">
+          <a href="/yuanyun.html" class="pcard-more">подробнее →</a>
+          <button class="pcard-ask" data-key="product-28" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-29.jpg" alt="«Мо юй фэнь» Порошок для ножных ванн" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Мо юй фэнь»</div>
+        <div class="fcard-subtitle">Порошок для ножных ванн</div>
+        <div class="fcard-volume">120 г · 15 саше по 8 г</div>
+        <div class="fcard-desc">Натуральный нефритовый порошок для согревающих ножных ванн. Способствует согреванию тела, снижает ощущение холода и зябкости в ногах, помогает глубоко расслабиться после долгого дня. Возвращает ощущение лёгкости и комфорта — идеальный ритуал для вечернего восстановления.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Нефритовый порошок — согревание и комфорт</li><li>Натуральный состав — мягкое действие</li><li>Снижение ощущения холода в ногах</li><li>Расслабление после долгого дня</li><li>Удобный формат саше — лёгкое использование</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">57 800 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Растворить 1–2 саше в тёплой воде. Принимать ножную ванну в течение 15–20 минут.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Только для наружного применения. Не принимать внутрь. Не является лекарственным средством.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-29" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-30.jpg" alt="«Кэлешу» Массажный крем двойного действия" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Кэлешу»</div>
+        <div class="fcard-subtitle">Массажный крем двойного действия</div>
+        <div class="fcard-volume">2 тюбика по 68 г</div>
+        <div class="fcard-desc">Уникальный массажный крем двойного действия с мощным растительным комплексом. Снижает ощущение дискомфорта в мышцах и суставах, сочетает согревающий и освежающий эффект, способствует глубокому расслаблению после нагрузок. Улучшает подвижность и возвращает комфорт телу — для активного образа жизни и ежедневного восстановления.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Экстракт гриба рейши — восстановление</li><li>Масло калофиллума — питание и комфорт</li><li>Экстракт куркумы — антиоксидантная поддержка</li><li>Масла лаванды, имбиря и женьшеня — расслабление</li><li>Растительный комплекс — двойное действие</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">30 075 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Нанести небольшое количество крема на область дискомфорта. Мягко втирать массажными движениями до полного впитывания.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Только для наружного применения. Избегать попадания на повреждённую кожу. Не является лекарственным средством.</div>
+        <div class="fcard-actions">
+          <a href="/kelesu.html" class="pcard-more">подробнее →</a>
+          <button class="pcard-ask" data-key="product-30" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-31.jpg" alt="«Фигура A» Программа клеточного очищения" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Фигура A»</div>
+        <div class="fcard-subtitle">Программа клеточного очищения</div>
+        <div class="fcard-volume">Курс на 7–15–30 дней</div>
+        <div class="fcard-desc">Мощный комплекс «Фигура A» с ключевым акцентом на энергию и тонус. Женьшень и Хуанцзин поддерживают уровень энергии, работоспособность и общий тонус организма — помогают справляться с усталостью и сохранять активность в течение дня. Вместе с Бирюкангом (мягкий детокс), Жиротопом (контроль аппетита), льняной кашей и коллагеновыми пептидами комплекс даёт видимый результат: больше энергии, меньше тяжести в теле и собранная фигура каждый день. Решение «под ключ» для тех, кто хочет не просто минус объёмы, а бодрость, тонус и лёгкость без жёстких диет.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Бирюканг — мягкий детокс и разгрузка ЖКТ</li><li>Жиротоп — контроль аппетита и веса</li><li>Женьшень и Хуанцзин — энергия и тонус ★</li><li>Льняная коллагеновая каша — кожа, сытость и клетчатка</li><li>Коллагеновые пептиды — суставы, кости и упругость</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">166 275 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Утро — Бирюканг + коллаген + Женьшень-Хуанцзин. День — Жиротоп + льняная каша. Вечер — восстановление энергии и тонус. Курс 7–15–30 дней.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не является лекарственным средством. Хранить в прохладном сухом месте.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-31" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
+      </div></div>
+      <div class="fcard">
+      <div class="fcard-img-wrap"><img src="/images/product-32.jpg" alt="«Фигура B» Программа клеточного очищения" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="fcard-body">
+        <div class="fcard-name">«Фигура B»</div>
+        <div class="fcard-subtitle">Программа клеточного очищения</div>
+        <div class="fcard-volume">Курс на 7–15–30 дней</div>
+        <div class="fcard-desc">Мощный комплекс «Фигура B» с ключевым акцентом на Кровочистку. Сюэланьдо работает с сердцем, сосудами и микроциркуляцией — уменьшает отёчность, снимает тяжесть в ногах и помогает «очистить» кровоток. Вместе с Бирюкангом (мягкий детокс), Жиротопом (контроль аппетита), льняной кашей и коллагеновыми пептидами комплекс даёт видимый результат: более подтянутый контур, лёгкость в теле и комфорт каждый день. Решение «под ключ» для тех, кто хочет чистые сосуды, меньше отёков и собранную фигуру без жёстких диет.</div>
+        <div class="fcard-cols">
+          <div>
+            <div class="fcard-ingr-title">Ключевые ингредиенты</div>
+            <ul class="fcard-ingr-list"><li>Бирюканг — мягкий детокс и разгрузка ЖКТ</li><li>Жиротоп — контроль аппетита и веса</li><li>Кровочистка (Сюэланьдо) — сердце, сосуды и дренаж ★</li><li>Льняная коллагеновая каша — кожа, сытость и клетчатка</li><li>Коллагеновые пептиды — суставы, кости и упругость</li></ul>
+          </div>
+          <div class="fcard-price-box">
+            <div class="fcard-price-title">Цена</div>
+            <div class="price-ru">166 275 ₸</div>
+          </div>
+        </div>
+        <div class="fcard-usage-title">Способ применения</div>
+        <div class="fcard-usage">Утро — Бирюканг + коллаген + Кровочистка. День — Жиротоп + льняная каша. Вечер — поддержка сосудов и восстановление. Курс 7–15–30 дней.</div>
+        <div class="fcard-warning"><b>Внимание!</b> Продаётся только в официальном магазине компании «Жимон Групп». Остерегайтесь подделок. Не является лекарственным средством. Хранить в прохладном сухом месте.</div>
+        <div class="fcard-actions">
+          <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
+          <button class="pcard-ask" data-key="product-32" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
+        </div>
       </div></div>
   </div>
 
-  <h2 class="section-h">Комплексные наборы</h2>
-  <p class="section-sub-h">Готовые программы из нескольких продуктов для комплексного решения</p>
-  <div class="product-grid" id="complexGrid">
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/complex-a.png" alt="«ФИГУРА A» · Диетический комплексный набор" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">«ФИГУРА A» · Диетический комплексный набор</div>
-      <div class="pcard-short">Фигура · детокс</div>
-      <div class="pcard-hook">Готовая программа: мягкое очищение, поддержка обмена веществ, контроль аппетита, питание суставов и общий тонус за счёт женьшеня и дудника.</div>
-      <div class="pcard-actions">
-      <a href="/complex-a.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="complex-a" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Для тех, кто хочет уменьшить объёмы без жёстких диет, чувствует тяжесть и отёчность, много сидит и мало двигается.</div>
-      </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/complex-b.png" alt="«ФИГУРА B» (версия Snow Lan Duo)" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">«ФИГУРА B» (версия Snow Lan Duo)</div>
-      <div class="pcard-short">Фигура · снижение веса</div>
-      <div class="pcard-hook">Акцент на лёгком очищении, работе с пищеварением и более выраженном дренажном эффекте — для фигуры, склонной к отёкам и «мягкости» в области живота и бёдер.</div>
-      <div class="pcard-actions">
-     <a href="/complex-b.html" class="pcard-more">подробнее →</a>
-      <button class="pcard-ask" data-key="complex-b" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Для тех, у кого вес «стоит», хотя питание уже улучшено, и есть застойность в теле.</div>
-      </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/complex-c.png" alt="КОМПЛЕКС «C» «Молодость изнутри и снаружи»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">КОМПЛЕКС «C» «Молодость изнутри и снаружи»</div>
-      <div class="pcard-short">Молодость · антивозраст</div>
-      <div class="pcard-hook">Трёхступенчатая система: коллагеновый пептидный порошок питает кожу изнутри, напиток с дигидрокверцетином защищает коллаген, антивозрастной мист закрепляет результат снаружи.</div>
-      <div class="pcard-actions">
-      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
-      <button class="pcard-ask" data-key="complex-c" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Для тех, кто замечает первые морщины, тусклость кожи и хочет замедлить старение без процедур и уколов.</div>
-      </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/complex-d.png" alt="КОМПЛЕКС «D» «Суставы и подвижность»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">КОМПЛЕКС «D» «Суставы и подвижность»</div>
-      <div class="pcard-short">Суставы · движение</div>
-      <div class="pcard-hook">Порошок для суставов питает хрящ изнутри, костный коллагеновый напиток укрепляет кость, а массажный крем даёт быстрое облегчение снаружи.</div>
-      <div class="pcard-actions">
-      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
-      <button class="pcard-ask" data-key="complex-d" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Для тех, у кого колени скрипят, спина ноет, и важна профилактика остеопороза.</div>
-      </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/complex-e.png" alt="КОМПЛЕКС «E» «Сосуды и давление»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">КОМПЛЕКС «E» «Сосуды и давление»</div>
-      <div class="pcard-short">Сосуды · сердце</div>
-      <div class="pcard-hook">Таблетки Ангелика Кейске и Натто очищают сосуды, напиток с дигидрокверцетином защищает капилляры, почечный комплекс регулирует давление через водно-солевой баланс.</div>
-      <div class="pcard-actions">
-      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
-      <button class="pcard-ask" data-key="complex-e" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Для тех, у кого давление скачет, отёки к вечеру и слабое кровообращение.</div>
-      </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/complex-f.png" alt="КОМПЛЕКС «F» «Мужская сила и тонус»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">КОМПЛЕКС «F» «Мужская сила и тонус»</div>
-      <div class="pcard-short">Мужская сила</div>
-      <div class="pcard-hook">Почечный комплекс восстанавливает базовую энергию, напиток с дигидрокверцетином ускоряет восстановление, таблетки Ангелика Кейске улучшают доставку питания к тканям.</div>
-      <div class="pcard-actions">
-      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
-      <button class="pcard-ask" data-key="complex-f" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Для тех, кто чувствует упадок сил и снижение мужского тонуса.</div>
-      </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/complex-g.png" alt="КОМПЛЕКС «G» «Женское здоровье»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">КОМПЛЕКС «G» «Женское здоровье»</div>
-      <div class="pcard-short">Женский баланс</div>
-      <div class="pcard-hook">Интимный бактериостатический комплекс восстанавливает микрофлору, почечный комплекс нормализует гормональный баланс и снижает ПМС, фруктово-овощные таблетки контролируют аппетит.</div>
-      <div class="pcard-actions">
-      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
-      <button class="pcard-ask" data-key="complex-g" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Для тех, у кого гормональный дисбаланс, ПМС и тяга к перекусам.</div>
-      </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/complex-h.png" alt="КОМПЛЕКС «H» «Антиоксидант и детокс»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">КОМПЛЕКС «H» «Антиоксидант и детокс»</div>
-      <div class="pcard-short">Иммунитет · детокс</div>
-      <div class="pcard-hook">Напиток с дигидрокверцетином нейтрализует свободные радикалы, таблетки Лотос и Боярышник очищают кишечник, таблетки Ангелика Кейске очищают кровь и сосуды.</div>
-      <div class="pcard-actions">
-      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
-      <button class="pcard-ask" data-key="complex-h" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Для тех, у кого ощущение зашлакованности, тяжесть без причины, хронический стресс.</div>
-      </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/complex-i.png" alt="КОМПЛЕКС «I» «Глаза и экранная усталость»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">КОМПЛЕКС «I» «Глаза и экранная усталость»</div>
-      <div class="pcard-short">Зрение · глаза</div>
-      <div class="pcard-hook">Глазной стик снимает усталость снаружи, напиток с дигидрокверцетином защищает сетчатку изнутри, таблетки улучшают микроциркуляцию в капиллярах глаза.</div>
-      <div class="pcard-actions">
-      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
-      <button class="pcard-ask" data-key="complex-i" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Для тех, чьи глаза краснеют и устают после работы за экраном.</div>
-      </div></div>
-      <div class="pcard">
-      <div class="pcard-img-wrap"><img src="/images/complex-j.png" alt="КОМПЛЕКС «J» «Лёгкий старт»" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-      <div class="pcard-body">
-      <div class="pcard-brand">КОМПЛЕКС «J» «Лёгкий старт»</div>
-      <div class="pcard-short">Энергия · тонус</div>
-      <div class="pcard-hook">Базовая программа: таблетки Лотос и Боярышник очищают кишечник и открывают путь для усвоения питательных веществ, почечный комплекс восстанавливает базовую энергию и тонус.</div>
-      <div class="pcard-actions">
-      <span class="pcard-more" onclick="toggleDesc(this)">подробнее</span>
-      <button class="pcard-ask" data-key="complex-j" onclick="openPengModalByKey(this)">Спросить Пэн →</button>
-      </div>
-      <div class="pcard-desc">Для тех, кто хочет попробовать продукцию JIMON с чего-то простого и понятного.</div>
-      </div></div>
-  </div>
-
- <div class="cta-block">
+  <div class="cta-block">
   <h2 style="color:var(--gold-light); font-family:'Noto Serif SC',serif; font-size:1.3rem;">Нужна помощь с выбором?</h2>
   <p style="color:rgba(250,246,236,0.7); margin-top:8px;">Спросите Пэн прямо на карточке товара, или свяжитесь с куратором.</p>
   <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
@@ -417,7 +963,7 @@
 </div>
 </div>
 
-<footer>© 2026 JIMON GROUP · <a href="/index.html" style="color:var(--gold);">jimongroup.kz</a><br><a href="/about.html" style="color:var(--gold);">О компании</a> · <a href="/catalog.html" style="color:var(--gold);">Каталог</a> · <a href="/marketing-plan.html" style="color:var(--gold);">Маркетинг-план</a> · <a href="/documentation.html" style="color:var(--gold);">Документация</a> · <a href="/privacy.html" style="color:var(--gold);">Конфиденциальность</a></footer>
+<footer>© 2026 JIMON GROUP · <a href="/index.html" style="color:var(--gold);">jimon-group.ru</a><br><a href="/about.html" style="color:var(--gold);">О компании</a> · <a href="/catalog.html" style="color:var(--gold);">Каталог</a> · <a href="/marketing-plan.html" style="color:var(--gold);">Маркетинг-план</a> · <a href="/documentation.html" style="color:var(--gold);">Документация</a> · <a href="/privacy.html" style="color:var(--gold);">Конфиденциальность</a></footer>
 
 <div class="peng-modal-overlay" id="pengModal">
   <div class="peng-modal-box">
@@ -430,7 +976,7 @@
       <button class="peng-modal-close" onclick="closePengModal()">✕</button>
     </div>
     <div class="peng-modal-messages" id="pengModalMessages"></div>
-   <div class="peng-modal-cta" id="pengModalCta">
+    <div class="peng-modal-cta" id="pengModalCta">
   <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
     <a href="/index.html?interest=client#lead" class="btn-primary" style="margin-top:0;">Стать клиентом →</a>
     <a href="/index.html?interest=partner#lead" class="btn-primary" style="margin-top:0; background:transparent; color:var(--gold-light); border:2px solid var(--gold);">Стать партнёром →</a>
@@ -563,5 +1109,5 @@ async function sendCatalogPeng(){
   input.focus();
 }
 </script>
-  </body>
+</body>
 </html>
