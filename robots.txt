@@ -11,6 +11,43 @@ Allow: /
 Disallow: /privacy.html
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
 
+User-agent: GPTBot
+Allow: /
+Disallow: /privacy.html
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /privacy.html
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /privacy.html
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+Disallow: /privacy.html
+
+User-agent: Applebot-Extended
+Allow: /
+
 User-agent: AhrefsBot
 Disallow: /
 
