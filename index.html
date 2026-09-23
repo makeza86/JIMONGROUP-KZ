@@ -347,8 +347,7 @@
   <a href="/marketing-plan.html" class="contact-menu-item">Маркетинг-план</a>
   <a href="/documentation.html" class="contact-menu-item">Документация</a>
   <div style="height:1px; background:var(--border); margin:4px 8px;"></div>
-  <a href="https://wa.me/77085080130?text=%5BKZ%5D%20Привет%2C%20хочу%20стать%20партнёром" target="_blank" class="contact-menu-item">📱 WhatsApp</a>
-  <a href="https://max.ru/u/f9LHodD0cOKnHRZnfCYKMqkxpgnByIZTcAc7JrC-EhSDi47lkK787lvsYjE" target="_blank" class="contact-menu-item">💬 Max</a>
+  <a href="https://wa.me/77476472119?text=%5BKZ%5D%20Привет%2C%20хочу%20стать%20партнёром" target="_blank" class="contact-menu-item">📱 WhatsApp</a>
 </div>  
     </div>     
   </div>    
@@ -377,7 +376,7 @@
   </div>
 
   <div class="hero-cta">
-  <a href="http://classone.jinmu10a.com/#/pages/login/register?share_code=1110153095&is_share=1" target="_blank" rel="noopener" class="btn-primary" style="text-decoration:none; display:inline-block;">✦ Стать партнёром</a>
+  <button type="button" class="btn-primary" onclick="openLeadModal('Hero')">✦ Стать партнёром</button>
 </div>
 </section>
 
@@ -548,9 +547,96 @@
     <div class="section-tag">Присоединяйтесь</div>
     <h2 class="section-title">Готовы начать путь <em>с JIMON GROUP?</em></h2>
     <p class="section-sub" style="margin:0 auto 32px;">Оставьте заявку, и менеджер вашего региона свяжется с вами лично</p>
-    <a href="http://classone.jinmu10a.com/#/pages/login/register?share_code=1110153095&is_share=1" target="_blank" rel="noopener" class="btn-primary" style="text-decoration:none; display:inline-block;">✦ Стать партнёром</a>
+    <button type="button" class="btn-primary" onclick="openLeadModal('Финальный CTA')">✦ Стать партнёром</button>
   </div>
 </section>
+
+
+<!-- МОДАЛЬНОЕ ОКНО ЗАЯВКИ -->
+<div class="modal-overlay" id="leadModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeLeadModal()">✕</button>
+
+    <div id="modalFormView">
+      <div class="section-tag" style="margin-bottom:8px; font-size:0.65rem; padding:4px 12px;">Заявка на партнёрство</div>
+<h2 class="section-title" style="font-size:1.2rem; margin-bottom:4px;">Заполни заявку</h2>
+<p class="section-sub" style="font-size:0.8rem; margin-bottom:12px;">Мы подберём куратора</p>
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label class="form-label modal-label">Страна</label>
+          <select class="form-input modal-input" id="m-country" onchange="updateCities()">
+            <option value="">Выберите страну</option>
+            <option value="Казахстан">Казахстан</option>
+            <option value="Россия">Россия</option>
+            <option value="Кыргызстан">Кыргызстан</option>
+            <option value="Узбекистан">Узбекистан</option>
+            <option value="Таджикистан">Таджикистан</option>
+            <option value="Беларусь">Беларусь</option>
+            <option value="Армения">Армения</option>
+            <option value="Азербайджан">Азербайджан</option>
+            <option value="Грузия">Грузия</option>
+            <option value="Молдова">Молдова</option>
+            <option value="Монголия">Монголия</option>
+            <option value="Турция">Турция</option>
+            <option value="Другая">Другая страна</option>
+          </select>
+          <input class="form-input modal-input" id="m-country-custom" placeholder="Укажите страну" style="display:none; margin-top:8px;">
+        </div>
+        <div class="form-field">
+          <label class="form-label modal-label">Город</label>
+          <select class="form-input modal-input" id="m-city" onchange="checkCustomCity()">
+            <option value="">Сначала выберите страну</option>
+          </select>
+          <input class="form-input modal-input" id="m-city-custom" placeholder="Укажите город" style="display:none; margin-top:8px;">
+        </div>
+        <div class="form-field">
+          <label class="form-label modal-label">Имя</label>
+          <input class="form-input modal-input" id="m-name" placeholder="Ваше имя">
+        </div>
+        <div class="form-field">
+          <label class="form-label modal-label">Фамилия</label>
+          <input class="form-input modal-input" id="m-surname" placeholder="Ваша фамилия">
+        </div>
+        <div class="form-field">
+          <label class="form-label modal-label">Код страны</label>
+          <select class="form-input modal-input" id="m-phone-code">
+            <option value="+7kz">🇰🇿 +7</option>
+            <option value="+7">🇷🇺 +7</option>
+            <option value="+996">🇰🇬 +996</option>
+            <option value="+998">🇺🇿 +998</option>
+            <option value="+992">🇹🇯 +992</option>
+            <option value="+375">🇧🇾 +375</option>
+            <option value="+374">🇦🇲 +374</option>
+            <option value="+994">🇦🇿 +994</option>
+            <option value="+995">🇬🇪 +995</option>
+            <option value="+373">🇲🇩 +373</option>
+            <option value="+976">🇲🇳 +976</option>
+            <option value="+90">🇹🇷 +90</option>
+            <option value="other">Другой код</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label class="form-label modal-label">Номер телефона</label>
+          <input class="form-input modal-input" id="m-phone" placeholder="700 123 45 67">
+        </div>
+      </div>
+      <button class="form-submit" onclick="submitLead()">Продолжить →</button>
+      <div class="form-note modal-note">Ваши данные защищены и не передаются третьим лицам.</div>
+    </div>
+
+    <div id="modalMessengerView" style="display:none; text-align:center;">
+      <div class="form-success-icon">🎉</div>
+      <div class="form-success-title">Отлично, осталось написать нам!</div>
+      <p class="modal-success-text">Мы работаем напрямую с лидером команды — из-за особенностей номера он пока не может написать первым. Нажмите на кнопку ниже, откроется WhatsApp с готовым сообщением — просто отправьте его 😊</p>
+      <div class="messenger-btns" style="display:flex; flex-direction:column; gap:12px; margin-top:20px;">
+        <a id="m-whatsapp-link" href="#" target="_blank" class="btn-primary" style="text-decoration:none; display:block;">📱 Написать в WhatsApp</a>
+      </div>
+      <p class="modal-success-wish" style="margin-top:16px;">Желаем крепкого здоровья и успешного старта в команде JIMON GROUP 🌿</p>
+      <button class="btn-secondary" style="margin-top:20px; border:none; cursor:pointer; background:none;" onclick="closeLeadModal()">Продолжить на сайте</button>
+    </div>
+  </div>
+</div>
 
 <footer>
   <div class="footer-logo">JIMON<span> GROUP</span></div>
@@ -572,12 +658,11 @@
 const CONFIG = {
   region: "Казахстан",
   leadSource: "jimongroup.kz",
-  maxLink: "https://max.ru/u/f9LHodD0cOKnHRZnfCYKMqkxpgnByIZTcAc7JrC-EhSDi47lkK787lvsYjE",
   socials: [
     { label:"TikTok", url:"https://www.tiktok.com/@jimongroup.ai" },
     { label: "Instagram", url: "https://www.instagram.com/jimongroup.gramm" },
     { label:"YouTube", url:"https://www.youtube.com/@jimongroup_gramm" },
-    { label:"WhatsApp", url:"https://wa.me/77085080130?text=%5BKZ%5D%20Привет%2C%20хочу%20стать%20партнёром" },
+    { label:"WhatsApp", url:"https://wa.me/77476472119?text=%5BKZ%5D%20Привет%2C%20хочу%20стать%20партнёром" },
     { label:"JimonGramm", url:"https://jimongramm.com" }
   ]
 };
@@ -625,7 +710,7 @@ function showLandingLimitReached(){
   if(badge) badge.textContent = 'Лимит на сегодня исчерпан';
   document.querySelector('.chat-input-row').style.display = 'none';
   const waText = encodeURIComponent('Здравствуйте! Хочу узнать больше про JIMON GROUP и стать партнёром.');
-  addMsg('peng', `Вы использовали 10 бесплатных вопросов на сегодня 🌿 Дальше лучше написать напрямую — отвечу быстрее в мессенджере:<br><br><a href="https://wa.me/77085080130?text=${waText}" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; margin:6px 6px 0 0; padding:10px 18px; font-size:0.85rem;">📱 WhatsApp</a><a href="${CONFIG.maxLink}" target="_blank" class="btn-secondary" style="text-decoration:none; display:inline-block; margin:6px 0 0; padding:10px 18px; font-size:0.85rem; border:none;">💬 MAX</a>`);
+  addMsg('peng', `Вы использовали 10 бесплатных вопросов на сегодня 🌿 Дальше лучше написать напрямую — отвечу быстрее в мессенджере:<br><br><a href="https://wa.me/77476472119?text=${waText}" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; margin:6px 6px 0 0; padding:10px 18px; font-size:0.85rem;">📱 WhatsApp</a>`);
 }
 function sendToPeng(){
   const input = document.getElementById('pengRealInput');
@@ -663,7 +748,7 @@ function sendToPeng(){
       if (action === 'catalog') {
         addMsg('peng', '<a href="/catalog.html" class="btn-primary" style="text-decoration:none; display:inline-block; margin-top:6px; padding:10px 18px; font-size:0.85rem;">📖 Смотреть каталог</a>');
       } else if (action === 'partner') {
-        addMsg('peng', '<a href="http://classone.jinmu10a.com/#/pages/login/register?share_code=1110153095&is_share=1" target="_blank" rel="noopener" class="btn-primary" style="text-decoration:none; display:inline-block; margin-top:6px; padding:10px 18px; font-size:0.85rem;">✦ Стать партнёром</a>');
+        addMsg('peng', '<a href="#" onclick="openLeadModal(\'Чат с Пэн\'); return false;" class="btn-primary" style="text-decoration:none; display:inline-block; margin-top:6px; padding:10px 18px; font-size:0.85rem;">✦ Стать партнёром</a>');
       }
       if(badge) badge.textContent = 'Бесплатных вопросов: ' + (data.remaining ?? '—');
     }
@@ -682,6 +767,104 @@ function toggleFaq(el){
 
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* ===== МОДАЛЬНОЕ ОКНО ЗАЯВКИ ===== */
+const CITIES = {
+  "Казахстан": ["Алматы","Астана","Шымкент","Караганда","Актобе","Тараз","Павлодар","Усть-Каменогорск","Другой город"],
+  "Россия": ["Москва","Санкт-Петербург","Новосибирск","Екатеринбург","Казань","Нижний Новгород","Краснодар","Уфа","Самара","Ростов-на-Дону","Челябинск","Омск","Воронеж","Красноярск","Другой город"],
+  "Кыргызстан": ["Бишкек","Ош","Джалал-Абад","Каракол","Другой город"],
+  "Узбекистан": ["Ташкент","Самарканд","Бухара","Андижан","Другой город"],
+  "Таджикистан": ["Душанбе","Худжанд","Бохтар","Другой город"],
+  "Беларусь": ["Минск","Гомель","Витебск","Могилёв","Другой город"],
+  "Армения": ["Ереван","Гюмри","Другой город"],
+  "Азербайджан": ["Баку","Гянджа","Другой город"],
+  "Грузия": ["Тбилиси","Батуми","Другой город"],
+  "Молдова": ["Кишинёв","Бельцы","Другой город"],
+  "Монголия": ["Улан-Батор","Другой город"],
+  "Турция": ["Стамбул","Анкара","Анталья","Другой город"],
+  "Другая": ["Другой город"]
+};
+function updateCities(){
+  const country = document.getElementById('m-country').value;
+  const citySelect = document.getElementById('m-city');
+  const countryCustom = document.getElementById('m-country-custom');
+  countryCustom.style.display = (country === 'Другая') ? 'block' : 'none';
+  citySelect.innerHTML = '<option value="">Выберите город</option>';
+  (CITIES[country] || []).forEach(c=>{
+    const opt = document.createElement('option'); opt.value = c; opt.textContent = c;
+    citySelect.appendChild(opt);
+  });
+  checkCustomCity();
+}
+function checkCustomCity(){
+  const city = document.getElementById('m-city').value;
+  document.getElementById('m-city-custom').style.display = (city === 'Другой город') ? 'block' : 'none';
+}
+let leadButtonSource = 'Не указан';
+let openedViaModalParam = false;
+function openLeadModal(buttonLabel){
+  leadButtonSource = buttonLabel || 'Не указан';
+  document.getElementById('leadModal').classList.add('open');
+  document.getElementById('modalFormView').style.display = 'block';
+  document.getElementById('modalMessengerView').style.display = 'none';
+}
+let catalogInterestLabel = '';
+window.addEventListener('load', function(){
+  const urlInterestParam = new URLSearchParams(window.location.search).get('interest');
+  const urlProductParam = new URLSearchParams(window.location.search).get('product');
+  if (urlInterestParam === 'client' || urlInterestParam === 'partner') {
+    const prefix = urlProductParam ? urlProductParam : 'каталог';
+    catalogInterestLabel = prefix + '-' + (urlInterestParam === 'client' ? 'клиент' : 'партнёр');
+    openedViaModalParam = true;
+    openLeadModal(urlInterestParam === 'client' ? 'Стать клиентом' : 'Стать партнёром');
+    window.history.replaceState({}, '', '/index.html');
+  }
+  if (new URLSearchParams(window.location.search).get('openModal') === '1') {
+    openedViaModalParam = true;
+    openLeadModal('Стать партнёром');
+    window.history.replaceState({}, '', '/index.html');
+  }
+});
+function closeLeadModal(){
+  document.getElementById('leadModal').classList.remove('open');
+  if (openedViaModalParam && document.referrer && document.referrer.includes(location.hostname)) {
+    location.href = document.referrer;
+  }
+}
+document.getElementById('leadModal').addEventListener('click', (e)=>{ if(e.target.id === 'leadModal') closeLeadModal(); });
+
+async function submitLead(){
+ const interestLabel = catalogInterestLabel;
+  let country = document.getElementById('m-country').value;
+  if(country === 'Другая') country = document.getElementById('m-country-custom').value.trim() || country;
+
+  let city = document.getElementById('m-city').value;
+  if(city === 'Другой город') city = document.getElementById('m-city-custom').value.trim() || city;
+
+  const name = document.getElementById('m-name').value.trim();
+  const surname = document.getElementById('m-surname').value.trim();
+  const fullName = (name + ' ' + surname).trim();
+  const phoneCode = document.getElementById('m-phone-code').value.replace('kz','');
+  const phone = document.getElementById('m-phone').value.trim();
+  const contact = phoneCode + ' ' + phone;
+
+  if(!country || !city || !name || !surname || !phone){ alert('Пожалуйста, заполните все поля.'); return; }
+  const btn = document.querySelector('#modalFormView .form-submit');
+  btn.textContent = 'Секунду...'; btn.disabled = true;
+  try{
+    fetch('https://jimongramm.com/api/landing-lead',{
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ name: fullName, city, contact, contactMethod:'—', country, source: CONFIG.leadSource + ' — ' + (interestLabel || leadButtonSource) })
+    }).catch(()=>{});
+  }catch(e){}
+
+  const waText = encodeURIComponent(`Здравствуйте! Меня зовут ${fullName}, ${city}, ${country}. Хочу стать партнёром JIMON GROUP.`);
+  document.getElementById('m-whatsapp-link').href = `https://wa.me/77476472119?text=${waText}`;
+
+  document.getElementById('modalFormView').style.display = 'none';
+  document.getElementById('modalMessengerView').style.display = 'block';
+  btn.textContent = 'Продолжить →'; btn.disabled = false;
+}
 
 function toggleContactMenu(){
   document.getElementById('contactMenu').classList.toggle('open');
